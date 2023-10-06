@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demian Hallyfax</title>
+    <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../public/assets/style-stories.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container">
+      <div class="cont-about"><%- include('./partials/about') %></div>
+
+      <div class="fanfic-main">
+        <h1>Mis Historias</h1>
+        <div class="fanfic-description">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            blanditiis esse, hic ipsum ratione debitis dolore accusantium.
+            Voluptatum dolores nesciunt qui corporis ea, ex laborum dolor quae
+            quas cumque earum?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates
+            illum voluptatem maxime, laudantium iste repellendus molestiae a
+            quas ea recusandae laboriosam fugit provident nobis voluptatibus sit
+            odit ducimus nihil ut distinctio ex dolor similique consequuntur
+            amet. Autem reprehenderit laboriosam iure fugiat, non in dolorum
+            delectus accusantium quaerat, eveniet nam laborum!
+          </p>
+        </div>
+
+        <div class="fanfic-covers-list">
+          <% for(let i = 0; i+1 <= storiesRange; i++){ %>
+          <div class="fanfic-card">
+            <img src="<%= storiesTEST[0].stories[i].img %>" alt="" />
+            <h2>
+              <a href="/stories/<%= storiesTEST[0].stories[i].idName %>"
+                ><%= storiesTEST[0].stories[i].title %></a
+              >
+            </h2>
+            <p>[<%= storiesTEST[0].stories[i].tags %>]</p>
+            <p><%= storiesTEST[0].stories[i].description %></p>
+            <a href="/stories/<%= storiesTEST[0].stories[i].idName %>">Leer mas -></a>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

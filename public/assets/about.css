@@ -1,0 +1,35 @@
+.cont-about {
+    width: 20%;
+    border-right: solid 5px #ffffff;
+  }
+  .about-info {
+    margin: 20px;
+    text-align: left;
+    font-size: 15px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-info h3 {
+    font-size: 20px;
+    font-family: caviarbold;
+    text-align: center;
+  }
+  
+  .about-me img {
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    border: solid 4px #37ea28;
+  }
+  .about-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .about-gallery img {
+    width: 100px;
+    margin: 5px;
+    border: solid 2px #000000;
+  }

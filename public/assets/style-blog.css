@@ -1,0 +1,38 @@
+.content {
+    display: flex;
+    flex-direction: row; 
+  }
+.content img{
+  width: 200px;
+}
+
+.about-blog-list{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-blog-list h2{
+  text-align: center;
+  color: #37ea28;
+}
+
+.about-blog-list ul{
+  margin: 30px;
+  width: 80%;
+  list-style: circle;
+
+  display: flex;
+  flex-direction: column;
+}
+.about-blog-list li{
+  margin: 5px;
+  text-align: justify;
+  color: #37ea28;
+}
+.about-blog-list a{
+  color: #37ea28;
+}
+.about-blog-list a:hover{
+  color: #ffffff;
+}

@@ -1,0 +1,131 @@
+@import url("content.css");
+@import url("fanfic.css");
+@import url("about.css");
+@import url("reset.css");
+/*
+#37ea28
+#c20000
+*/
+
+@font-face {
+  font-family: theanodidot;
+  src: url("fonts/theano-didot/theanoDidot-Regular.ttf");
+}
+@font-face {
+  font-family: theboldfont;
+  src: url("fonts/the-bold-font/theboldfont.ttf");
+}
+@font-face {
+  font-family: caviar;
+  src: url("fonts/caviar-dreams/CaviarDreams.ttf");
+}
+@font-face {
+  font-family: caviarbold;
+  src: url("fonts/caviar-dreams/CaviarDreams_Bold.ttf");
+}
+
+body {
+  background-color: #000000;
+  font-family: caviar;
+  font-size: 14px;
+  color: #ffffff;
+}
+h1 {
+  font-family: theboldfont;
+  font-size: 18px;
+  color: #37ea28;
+  margin: 20px;
+  padding: 10px;
+}
+p {
+  font-size: 14px;
+  margin: 10px;
+  text-align: justify;
+}
+h2 {
+  font-size: 20px;
+  font-family: caviarbold;
+  margin: 10px;
+}
+a {
+  font-size: 12px;
+  margin: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover{
+  color: #37ea28;
+  font-size: 15px;
+}
+
+nav {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #37ea28;
+  border-bottom: #ffffff solid 2px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-title {
+  font-family: theboldfont;
+  font-weight: bold;
+}
+.nav-title a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav-title a:hover{
+  color: #ffffff;
+}
+.nav-a {
+  color: #000000;
+  font-family: caviarbold;
+  font-size: 13px;
+}
+.nav-a:hover {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+
+.container {
+  margin: auto;
+  width: 90%;
+  /* background: #0b0b0b; */
+
+  display: flex;
+  flex-direction: row;
+}
+footer{
+  background-color: #151515;
+  margin-top: 10px;
+  border-top: #ffffff solid 1px;
+  padding: 20px;
+}
+.footer-first {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.footer-greatings {
+  margin: 10px;
+}
+.footer-contact {
+  margin: 10px;
+}
+.contact-list {
+
+  display: flex;
+  flex-direction: row;
+}
+.A3P{
+  padding: 10px;
+}
+.A3P p{
+  font-size: 12px;
+  text-align: center;
+}

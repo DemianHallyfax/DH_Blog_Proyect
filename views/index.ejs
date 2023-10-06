@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demian Hallyfax</title>
+    <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container">
+      <div class="cont-about">
+        <%- include('./partials/about') %>
+      </div>
+
+      <div class="cont-blog">
+        <h1>Ultimas entrada del Blog</h1>
+        <%- include('./pagePreview/contentPreview')%>
+
+        <h1>Mis Historias</h1>
+        <%- include('./pagePreview/fanfic') %>
+      </div>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

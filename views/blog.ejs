@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demian Hallyfax</title>
+    <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../public/assets/style-blog.css" />
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+
+    <div class="container">
+      <div class="cont-about">
+        <%- include('./partials/about') %>
+
+        <%- include('./blog/blogList') %>
+      </div>
+
+      <div class="cont-blog">
+        <h1>El Blog de Demian</h1>
+        <%- include('./blog/view') %>
+      </div>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

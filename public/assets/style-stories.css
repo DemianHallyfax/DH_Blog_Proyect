@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    align-content: center;
+}
+.container h1 {
+    border-bottom: solid 1px #ffffff;
+    margin: 10px;
+    padding: 20px;
+}
+.fanfic-description{
+    margin: 10px;
+    border-bottom: solid 1px #ffffff;
+
+}
+.fanfic-main a{
+    font-size: 15px;
+}
+.fanfic-main a:hover{
+    font-size: 16px;
+}
+.fanfic-main p{
+    margin: 20px;
+}
+.fanfic-main h2 a{
+    font-size: 20px;
+    font-family: caviarbold;
+    margin: 10px;
+}
+.fanfic-main h2 a:hover{
+    font-size: 22px;
+}
+.fanfic-covers-list{
+    margin: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.fanfic-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fanfic-card p{
+    margin: 10px;
+}
+.fanfic-card img{
+    width: 150px;
+    margin: 10px;
+    border: solid 4px #37ea28;
+}

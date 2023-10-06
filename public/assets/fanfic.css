@@ -1,0 +1,15 @@
+.cont-fanfic {
+    width: 60%;
+    margin: auto;
+    padding: 40px;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .cont-fanfic img {
+    width: 150px;
+    height: 200px;
+  }

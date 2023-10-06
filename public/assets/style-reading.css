@@ -1,0 +1,35 @@
+p{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+.container-reading{
+    display: flex;
+    flex-direction: column;
+}
+.storie-cover{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 2px #ffffff;
+}
+.storie-cover img{
+    width: 100px;
+    margin: 20px;
+}
+
+.storie-content{
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.storie-content p{
+    margin-top: 5px;
+    font-size: 16px;
+}
+.storie-content h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}

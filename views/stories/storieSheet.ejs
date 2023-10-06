@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demian Hallyfax</title>
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/style-reading.css" type="text/css"/>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container">
+      <div class="container-reading">
+        <div class="storie-cover">
+          <div>
+            <img src="https://placehold.co/150x200" alt="" />
+          </div>
+          <div>
+              <h1><%= renderTitle %></h1>
+              <p>[<%= renderTags %>]</p>
+              <p>(F E C H A)</p>
+              <p><%= renderDescription %></p>
+          </div>
+        </div>
+        <div class="storie-content">
+            <h1>Capitulo I</h1>
+
+            <hr>
+              <p class="storie-render"><%= renderStorie %></p>
+            <hr>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>
