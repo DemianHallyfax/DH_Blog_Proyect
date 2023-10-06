@@ -12,11 +12,18 @@
     />
   </head>
   <body>
+
     <%- include('./partials/nav') %>
 
     <div class="container">
       <div class="cont-about"><%- include('./partials/about') %></div>
+    
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Una descripción simple de la sección
 
+  — Inventarte algo para que esto suene chido, pero si no se te ocurre nada. ELIMINA ESTA
+    SECCIÓN.  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
       <div class="fanfic-main">
         <h1>Mis Historias</h1>
         <div class="fanfic-description">
@@ -36,6 +43,12 @@
           </p>
         </div>
 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Chunk de Renderizacion de Tarjetas de presentación para las historias
+
+  — Hacer que las imagenes tambien actuen como hypervinculos
+    + Cambiar el :hover de las mismas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div class="fanfic-covers-list">
           <% for(let i = 0; i+1 <= storiesRange; i++){ %>
           <div class="fanfic-card">
