@@ -42,27 +42,6 @@ paginationRouter.get("/posts", paginatedResults(posts),(req, res) => {
 });
 
 paginationRouter.get("/users", paginatedResults(users), (req, res) => {
-  // const page = parseInt(req.query.page),
-  //   limit = parseInt(req.query.limit),
-  //   startIndex = (page - 1) * limit,
-  //   endIndex = page * limit,
-  //   results = {};
-
-  // if (endIndex < users.length) {
-  //   results.next = {
-  //     page: page + 1,
-  //     limit: limit,
-  //   };
-  // }
-
-  // if (startIndex > 0) {
-  //   results.previus = {
-  //     page: page - 1,
-  //     limit: limit,
-  //   };
-  // }
-
-  // results.results = users.slice(startIndex, endIndex);
   res.json(res.paginatedResults);
 });
 
