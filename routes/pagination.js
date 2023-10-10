@@ -37,33 +37,62 @@ const posts = [
   { id: 15, name: "Post 15" },
 ];
 
-paginationRouter.get("/posts", (req, res) =>{
-
-})
-
-paginationRouter.get("/users", (req, res) => {
-  const page = parseInt(req.query.page),
-    limit = parseInt(req.query.limit),
-    startIndex = (page - 1) * limit,
-    endIndex = page * limit,
-    results = {};
-
-  if (endIndex < users.length) {
-    results.next = {
-      page: page + 1,
-      limit: limit,
-    };
-  }
-
-  if (startIndex > 0) {
-    results.previus = {
-      page: page - 1,
-      limit: limit,
-    };
-  }
-
-  results.results = users.slice(startIndex, endIndex);
-  res.json(results);
+paginationRouter.get("/posts", paginatedResults(posts),(req, res) => {
+  res.json(res.paginatedResults);
 });
+
+paginationRouter.get("/users", paginatedResults(users), (req, res) => {
+  // const page = parseInt(req.query.page),
+  //   limit = parseInt(req.query.limit),
+  //   startIndex = (page - 1) * limit,
+  //   endIndex = page * limit,
+  //   results = {};
+
+  // if (endIndex < users.length) {
+  //   results.next = {
+  //     page: page + 1,
+  //     limit: limit,
+  //   };
+  // }
+
+  // if (startIndex > 0) {
+  //   results.previus = {
+  //     page: page - 1,
+  //     limit: limit,
+  //   };
+  // }
+
+  // results.results = users.slice(startIndex, endIndex);
+  res.json(res.paginatedResults);
+});
+
+function paginatedResults(model) {
+  return (req, res, next) => {
+    const page = parseInt(req.query.page),
+      limit = parseInt(req.query.limit),
+      startIndex = (page - 1) * limit,
+      endIndex = page * limit,
+      results = {};
+
+    if (endIndex < model.length) {
+      results.next = {
+        page: page + 1,
+        limit: limit,
+      };
+    }
+
+    if (startIndex > 0) {
+      results.previus = {
+        page: page - 1,
+        limit: limit,
+      };
+    }
+
+  results.results = model.slice(startIndex, endIndex);
+
+  res.paginatedResults = results;
+  next();
+  };
+}
 
 module.exports = paginationRouter;
