@@ -1,5 +1,6 @@
 const express = require("express"),
-  paginationRouter = express.Router();
+  paginationRouter = express.Router(),
+  storiesTesting = require("../info_json/stories-testingTwo.json");
 
 const users = [
   { id: 1, name: "User 1" },
@@ -37,12 +38,19 @@ const posts = [
   { id: 15, name: "Post 15" },
 ];
 
-paginationRouter.get("/posts", paginatedResults(posts),(req, res) => {
+const storiesTestingInfo = storiesTesting[0]
+// console.log(storiesTesting);
+
+paginationRouter.get("/posts", paginatedResults(storiesTesting),(req, res) => {
   res.json(res.paginatedResults);
 });
 
 paginationRouter.get("/users", paginatedResults(users), (req, res) => {
   res.json(res.paginatedResults);
+});
+
+paginationRouter.get("/testingVlog", paginatedResults(users), (req, res) => {
+  res.render("paginationTesting");
 });
 
 function paginatedResults(model) {
@@ -73,5 +81,7 @@ function paginatedResults(model) {
   next();
   };
 }
+
+// console.log(JSON.stringify(storiesTesting));
 
 module.exports = paginationRouter;
