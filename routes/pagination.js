@@ -38,19 +38,30 @@ const posts = [
   { id: 15, name: "Post 15" },
 ];
 
-const storiesTestingInfo = storiesTesting[0]
+const storiesTestingInfo = storiesTesting[0];
 // console.log(storiesTesting);
 
-paginationRouter.get("/posts", paginatedResults(storiesTesting),(req, res) => {
+paginationRouter.get("/posts", paginatedResults(storiesTesting), (req, res) => {
   res.json(res.paginatedResults);
 });
 
 paginationRouter.get("/users", paginatedResults(users), (req, res) => {
-  res.json(res.paginatedResults);
+  res.json(res.paginatedResults[0].title);
 });
 
-paginationRouter.get("/testingVlog", paginatedResults(users), (req, res) => {
-  res.render("paginationTesting");
+paginationRouter.get("/testingVlog", (req, res) => {
+  const pageOne = parseInt(req.query.page);
+  const limitOne = parseInt(req.query.limit);
+
+  const startIndexOne = (pageOne - 1) * limitOne;
+  const endIndexOne = pageOne * limitOne;
+
+
+  const arrayValue = storiesTesting.slice(startIndexOne, endIndexOne);
+
+  // console.log(arrayValue[0].title);
+
+  res.render("paginationTesting", {arrayValue});
 });
 
 function paginatedResults(model) {
@@ -75,13 +86,29 @@ function paginatedResults(model) {
       };
     }
 
-  results.results = model.slice(startIndex, endIndex);
+    results.results = model.slice(startIndex, endIndex);
 
-  res.paginatedResults = results;
-  next();
+    res.paginatedResults = results;
+    next();
   };
 }
 
-// console.log(JSON.stringify(storiesTesting));
+// const pageOne = 2;
+// const limitOne = 3;
+
+// const startIndexOne = (pageOne - 1) * limitOne;
+// const endIndexOne = pageOne * limitOne;
+
+// console.log("./././././././././././././");
+// console.log("Testing 1");
+// console.log("./././././././././././././");
+
+// const arrayValue = storiesTesting.slice(startIndexOne, endIndexOne);
+
+// console.log(arrayValue[0].title);
 
 module.exports = paginationRouter;
+
+array.forEach(element => {
+  
+});

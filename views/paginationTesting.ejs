@@ -1,0 +1,12 @@
+<h1>Hello World</h1>
+
+<div>
+  <% for(let i = 0; i < arrayValue.length; i++){%>
+  <h2><%= arrayValue[i].title%></h2>
+  <img src="<%= arrayValue[0].img %>" alt="" />
+  <p><i><%= arrayValue[i].tags %></i></p>
+  <p><%= arrayValue[i].description %></p>
+  <hr />
+  <p><%= arrayValue[i].storie %></p>
+  <%}%>
+</div>
