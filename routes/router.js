@@ -1,42 +1,62 @@
 const express = require('express'),
     app = express(),
     router = express.Router(),
-    articlesTEST = require("../info_json/articlesTEST.json"),
-    info = require('../info_json/info.json'),
-    pagination = require('./pagination'),
-    storiesTesting = require("../info_json/stories-testingTwo.json");
+    articles = require("../info_json/articlesTEST.json");
 
-//---------------------------------------------
+/*------------------------------------------
 //MIDLEWARE
-//---------------------------------------------
+------------------------------------------*/
 app.use(express.static(__dirname + "/public"));
 app.use("/public", express.static("public"));
 
 
 
-//---------------------------------------------
-//VARIABLES IMPORTANTES 
-//---------------------------------------------
-articlesTEST.reverse();
-var articleRange = parseInt(articlesTEST.length);
+/*------------------------------------------
+VARIABLES IMPORTANTES 
+------------------------------------------*/
+articles.reverse();
+var articleRange = parseInt(articles.length);
 
-//---------------------------------------------
-//RUTAS
-//---------------------------------------------
+/*------------------------------------------
+RUTAS
+------------------------------------------*/
 router.get('/', (req, res) => {
     res.render('index', { 
-        articles: articlesTEST, 
-        info:info, 
-        articleRange:articleRange 
+        articles,
+        articleRange
     });
 });
 
-router.get('/blog', (req, res) => {
+router.get('/blog', async(req, res) => {
+    /*
+    PAGINACIÓN "SENCILLA"
+    (Se que hay maneras de hacer este trabajo mas sencillo, 
+    pero esta me gusta mas...)
+    */
+    const page = parseInt(req.query.page),
+        limit = parseInt(req.query.limit);
+
+    const artRend = await paginatedResults(page, limit);
+
     res.render('blog', {
-        articles: articlesTEST, 
-        info:info, 
-        articleRange:articleRange
+        artRend,
+        articles,
+        articleRange
     });
 });
 
+/*------------------------------------------
+FUNCION QUE CREA LA PAGINACIÓN Y DEVUELVE UN OBJETO CON EL CUAL TRABJAR.
+------------------------------------------*/
+function paginatedResults(page, limit) {
+      const startIndex = (page - 1) * limit,
+        endIndex = page * limit,
+        results = {};
+  
+      return results.results = articles.slice(startIndex, endIndex);
+  }
+/*------------------------------------------
+TESTING FUNCTION "paginatedResults()".
+console.log(paginatedResults(1, 5));
+------------------------------------------*/
 module.exports = router;

@@ -52,15 +52,15 @@ Chunk de Renderizacion de Tarjetas de presentación para las historias
         <div class="fanfic-covers-list">
           <% for(let i = 0; i+1 <= storiesRange; i++){ %>
           <div class="fanfic-card">
-            <img src="<%= storiesTEST[0].stories[i].img %>" alt="" />
+            <img src="<%= stories[0].stories[i].img %>" alt="" />
             <h2>
-              <a href="/stories/<%= storiesTEST[0].stories[i].idName %>"
-                ><%= storiesTEST[0].stories[i].title %></a
+              <a href="/stories/<%= stories[0].stories[i].idName %>"
+                ><%= stories[0].stories[i].title %></a
               >
             </h2>
-            <p>[<%= storiesTEST[0].stories[i].tags %>]</p>
-            <p><%= storiesTEST[0].stories[i].description %></p>
-            <a href="/stories/<%= storiesTEST[0].stories[i].idName %>">Leer mas -></a>
+            <p>[<%= stories[0].stories[i].tags %>]</p>
+            <p><%= stories[0].stories[i].description %></p>
+            <a href="/stories/<%= stories[0].stories[i].idName %>">Leer mas -></a>
           </div>
           <% } %>
         </div>
