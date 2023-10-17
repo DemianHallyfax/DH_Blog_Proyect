@@ -108,7 +108,3 @@ function paginatedResults(model) {
 // console.log(arrayValue[0].title);
 
 module.exports = paginationRouter;
-
-array.forEach(element => {
-  
-});

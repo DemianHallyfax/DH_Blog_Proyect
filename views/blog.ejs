@@ -57,8 +57,25 @@ Visualizacion de las entradas de blog
           </div>
         </div>
         <% } %>
+
+        <div class="pagination-blog">
+          <% if(artRendPrevius){%>
+            <p><a href="/blog?page=<%= artRendPrevius %>&limit=5"><</a></p>
+          <% } %>
+
+          <% for(let i = 0; i < indexLength.length; i++) {%>
+            <p><a href="/blog?page=<%= i + 1 %>&limit=5"><%= i + 1 %></a></p>
+          <%}%>
+  
+          <% if(artRendNext){%>
+            <p><a href="/blog?page=<%= artRendNext %>&limit=5">></a></p>
+          <% } %>
+        </div>
+
       </div>
     </div>
+
+    
 
     <%- include('./partials/footer') %>
   </body>

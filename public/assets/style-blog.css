@@ -1,3 +1,8 @@
+@font-face {
+  font-family: theboldfont;
+  src: url("fonts/the-bold-font/theboldfont.ttf");
+}
+
 .content {
     display: flex;
     flex-direction: row; 
@@ -35,4 +40,27 @@
 }
 .about-blog-list a:hover{
   color: #ffffff;
+}
+
+.pagination-blog{
+  display: flex;
+  justify-content: safe;
+
+  margin: 5px;
+  width: 50%;
+  border-top: #a5a5a5 solid 2px;
+}
+.pagination-blog p{
+  display: flex;
+  justify-content: safe;
+  margin: 0%;
+}
+.pagination-blog a{
+  color: #a5a5a5;
+  font-size: 25px;
+  font-family: theboldfont;
+}
+.pagination-blog a:hover{
+  color: #37ea28;
+  font-size: 27px;
 }
