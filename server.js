@@ -23,5 +23,3 @@ app.use(express.static(__dirname + "/public"));
 app.use("/public", express.static("public"));
 
 app.listen(5000);
-
-console.log("Hello world!");
