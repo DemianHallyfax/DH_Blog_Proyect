@@ -14,7 +14,7 @@
       <div class="cont-about">
         <%- include('./partials/about') %>
 
-        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Listado del nombre de todos los articulos.
 Si.
 TODOS.
@@ -35,7 +35,7 @@ Que no se escape ninguno. Esto para funcionar como indice principal de busqueda.
         </div>
       </div>
 
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Visualizacion de las entradas de blog
 
   — Crear paginacion para mostrar de 10 en 10 los articulos.
@@ -49,10 +49,10 @@ Visualizacion de las entradas de blog
         <% for(let i = 0; i < artRend.length; i++){%>
         <div class="content">
           <div>
-            <img src="https://placehold.co/200x200" alt="" />
+            <img src="<%= artRend[i].img %>" alt="" />
           </div>
           <div>
-            <h2><%= artRend[i].title %></h2>
+            <h2><a href=""><%= artRend[i].title %></a></h2>
             <p><%= artRend[i].description %></p>
           </div>
         </div>

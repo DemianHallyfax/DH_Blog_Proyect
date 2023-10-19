@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demian Hallyfax</title>
+    <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../public/assets/style-blog.css" />
+    <link rel="stylesheet" href="../public/assets/blog-article.css" />
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+      <div class="container">
+        <div class="cont-about">
+          <%- include('../partials/about') %>
+          <div class="about-blog-list">
+            <h2>Todas las entradas:</h2>
+            <ul>
+              <% for(let i = 0; i+1 <= articleRange; i++){ %>
+              <li><a href="#"><%= articles[0].articles[i].title %></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cont-blog">
+            <h1><%= renderTitle %></h1>
+            <img src="<%= renderImg %>" alt="">
+            <p><%= renderArticle %></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

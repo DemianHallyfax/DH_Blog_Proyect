@@ -1,3 +1,5 @@
+const articles = require("../../info_json/articlesTEST.json")
+
 function paginatedResults(page, limit, model) {
   const startIndex = (page - 1) * limit,
     endIndex = page * limit,
@@ -39,4 +41,15 @@ function paginatedResults(page, limit, model) {
 
   return { results, next, previus, index };
 }
+
+// async function findArticleId(model, id){
+//   let findValue = await model.find((x) => x.idName === id);
+
+//   return findValue
+// }
+
+// let findArticle = findArticleId(articles[0].articles, 1)
+
+// console.log("este es el bueno: " + findArticle.title);
+
 module.exports = { paginatedResults };
