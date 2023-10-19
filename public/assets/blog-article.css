@@ -1,0 +1,12 @@
+.cont-blog p{
+    width: auto;
+    margin-left: 40px;
+
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+.cont-blog img{
+    margin: 40px;
+}

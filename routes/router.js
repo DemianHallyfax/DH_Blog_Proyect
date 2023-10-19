@@ -13,8 +13,8 @@ app.use("/public", express.static("public"));
 /*------------------------------------------
 VARIABLES IMPORTANTES 
 ------------------------------------------*/
-articles.reverse();
-var articleRange = parseInt(articles.length);
+articles[0].articles.reverse();
+var articleRange = parseInt(articles[0].articles.length);
 
 /*------------------------------------------
 RUTAS
@@ -43,6 +43,25 @@ router.get("/blog", async (req, res) => {
     indexLength: indexLength,
     articles,
     articleRange,
+  });
+});
+
+router.get("/blog/:id", async (req, res) => {
+  let id = parseInt(req.params.id);
+  const findValue = await articles[0].articles.find(
+    (x) => x.id === id
+  );
+
+  let renderTitle = findValue.title,
+    renderArticle = findValue.article,
+    renderImg = findValue.img;
+
+  res.render("blog-articles/articlesSheet", {
+    renderTitle,
+    renderArticle,
+    renderImg,
+    articleRange,
+    articles,
   });
 });
 module.exports = router;

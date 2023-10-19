@@ -28,12 +28,14 @@ storiesRouter.get("/stories/index", (req, res) => {
 STORIES
 ---------------------------------------------*/
 storiesRouter.get("/stories/:id", async (req, res) => {
-  const findValue = await stories[0].stories.find((x) => x.idName === req.params.id);
+  const findValue = await stories[0].stories.find(
+    (x) => x.idName === req.params.id
+  );
 
   let renderTitle = findValue.title,
-      renderStorie = findValue.storie,
-      renderTags = findValue.tags,
-      renderDescription = findValue.tags
+    renderStorie = findValue.storie,
+    renderTags = findValue.tags,
+    renderDescription = findValue.tags;
 
   res.render("stories/storieSheet", {
     renderTitle,
@@ -43,4 +45,3 @@ storiesRouter.get("/stories/:id", async (req, res) => {
   });
 });
 module.exports = storiesRouter;
-
