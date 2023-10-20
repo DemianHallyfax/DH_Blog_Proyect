@@ -32,6 +32,10 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/QuienSoy", async (req, res) => {
+  res.render("quienSoy")
+});
+
 router.get("/blog", async (req, res) => {
   const page = parseInt(req.query.page),
     limit = parseInt(req.query.limit),
