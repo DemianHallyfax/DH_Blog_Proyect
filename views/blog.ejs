@@ -6,6 +6,7 @@
     <title>Demian Hallyfax</title>
     <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
     <link rel="stylesheet" href="../public/assets/style-blog.css" />
+    <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
   </head>
   <body>
     <%- include('./partials/nav') %>
@@ -29,7 +30,7 @@ Que no se escape ninguno. Esto para funcionar como indice principal de busqueda.
           <h2>Todas las entradas:</h2>
           <ul>
             <% for(let i = 0; i+1 <= articleRange; i++){ %>
-            <li><a href="#"><%= articles[i].title %></a></li>
+            <li><a href="/blog/<%= articles[i].id %>"><%= articles[i].title %></a></li>
             <% } %>
           </ul>
         </div>
@@ -49,10 +50,10 @@ Visualizacion de las entradas de blog
         <% for(let i = 0; i < artRend.length; i++){%>
         <div class="content">
           <div>
-            <img src="<%= artRend[i].img %>" alt="" />
+            <a href="/blog/<%= artRend[i].id %>"><img src="<%= artRend[i].imgTemplate %>" alt=""/></a>
           </div>
           <div>
-            <h2><a href=""><%= artRend[i].title %></a></h2>
+            <h2><a href="/blog/<%= artRend[i].id %>"><%= artRend[i].title %></a></h2>
             <p><%= artRend[i].description %></p>
           </div>
         </div>

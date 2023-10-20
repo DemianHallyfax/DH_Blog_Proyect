@@ -6,6 +6,7 @@
     <title>Demian Hallyfax</title>
     <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
     <link rel="stylesheet" href="/assets/style-reading.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
   </head>
   <body>
     <%- include('../partials/nav') %>
@@ -27,7 +28,9 @@
             <h1>Capitulo I</h1>
 
             <hr>
-              <p class="storie-render"><%= renderStorie %></p>
+              <div>
+                <%- renderStorie %>
+              </div>
             <hr>
         </div>
       </div>

@@ -1,7 +1,8 @@
 const express = require("express"),
   app = express(),
   router = express.Router(),
-  articles = require("../info_json/articlesTEST.json"),
+  articlesJSON = require("../info_json/articlesTEST.json"),
+  stories = require("../info_json/stories-testing.json"),
   { paginatedResults } = require("./functions/func");
 
 /*------------------------------------------
@@ -13,8 +14,12 @@ app.use("/public", express.static("public"));
 /*------------------------------------------
 VARIABLES IMPORTANTES 
 ------------------------------------------*/
-articles[0].articles.reverse();
-var articleRange = parseInt(articles[0].articles.length);
+let articles = articlesJSON[0].articles;
+
+articles.reverse();
+var articleRange = parseInt(articles.length);
+
+
 
 /*------------------------------------------
 RUTAS
@@ -23,6 +28,7 @@ router.get("/", (req, res) => {
   res.render("index", {
     articles,
     articleRange,
+    stories
   });
 });
 
@@ -48,7 +54,7 @@ router.get("/blog", async (req, res) => {
 
 router.get("/blog/:id", async (req, res) => {
   let id = parseInt(req.params.id);
-  const findValue = await articles[0].articles.find(
+  const findValue = await articles.find(
     (x) => x.id === id
   );
 
@@ -65,3 +71,5 @@ router.get("/blog/:id", async (req, res) => {
   });
 });
 module.exports = router;
+
+

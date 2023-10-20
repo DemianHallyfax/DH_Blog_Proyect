@@ -91,7 +91,9 @@ nav {
   font-size: 15px;
 }
 
-
+.cont-fanfic img:hover{
+  border: solid 4px #37ea28;
+}
 .container {
   margin: auto;
   width: 90%;
