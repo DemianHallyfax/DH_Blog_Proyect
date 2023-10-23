@@ -20,16 +20,20 @@
 }
 .intro img{
     margin: auto;
+    border-radius: 100px;
+    width: 200px;
 }
 .explicacion{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 90%;
+    margin: auto;
 
     border-bottom: #b1b1b1 solid;
 }
 .explicacion img{
-    width: 300px;
+    width: 250px;
     margin: 40px;
     border-radius: 180px;
     border: #37ea28 solid 5px;
@@ -44,10 +48,18 @@
     flex-direction: column;
 
     border-bottom: #b1b1b1 solid;
+    width: 90%;
+    margin: auto;
+}
+.proyectos a{
+    margin: 0px;
+    font-size: 14px;
+    color: #37ea28;
 }
 .proyectos h1{
     text-align: center;
 }
+
 .proyectos img{
     width: 400px;
     height: min-content;
@@ -65,4 +77,27 @@
 }
 .YT p{
     margin: 20px;
+}
+.Audiphon3{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    width: 80%;
+    padding: 20px;
+}
+.Audiphon3 img{
+    width: 300px;
+    border: #dbdbdb solid 2px;
+}
+.Audiphon3 p{
+    margin: 20px;
+}
+.Agradecimientos{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+.Agradecimientos p{
+    text-align: center;
 }

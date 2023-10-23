@@ -25,7 +25,8 @@
 }
 
 body {
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-image: url("../imgs/patterns/image-dphqi1s5.png");
   font-family: caviar;
   font-size: 14px;
   color: #ffffff;
@@ -96,11 +97,17 @@ nav {
 }
 .container {
   margin: auto;
-  width: 90%;
-  /* background: #0b0b0b; */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  width: 80%;
+  background: #00000089;
+  border: #37ea28 solid 2px;
+
 
   display: flex;
   flex-direction: row;
+  justify-self: center;
 }
 footer{
   background-color: #151515;
