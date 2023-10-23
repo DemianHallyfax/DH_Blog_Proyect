@@ -2,37 +2,41 @@
 @import url("fanfic.css");
 @import url("about.css");
 @import url("reset.css");
-/*
-#37ea28
-#c20000
-*/
 
 @font-face {
-  font-family: theanodidot;
-  src: url("fonts/theano-didot/theanoDidot-Regular.ttf");
+  font-family: acari;
+  src: url("fonts/acari-sans-neue/AcariSansNeue-Regular.ttf");
 }
 @font-face {
-  font-family: theboldfont;
-  src: url("fonts/the-bold-font/theboldfont.ttf");
+  font-family: acari-bold;
+  src: url("fonts/acari-sans-neue/AcariSansNeue-Bold.ttf");
 }
 @font-face {
-  font-family: caviar;
-  src: url("fonts/caviar-dreams/CaviarDreams.ttf");
+  font-family: myfirstfont;
+  src: url("fonts/myfirstfont/ManilaSansBld.otf");
 }
 @font-face {
-  font-family: caviarbold;
-  src: url("fonts/caviar-dreams/CaviarDreams_Bold.ttf");
+  font-family: Libre-C;
+  src: url("fonts/Libre-Caslon-Text-master/fonts/TTF/LibreCaslonText-Regular.ttf");
+}
+@font-face {
+  font-family: Libre-C-Bold;
+  src: url("fonts/Libre-Caslon-Text-master/fonts/TTF/LibreCaslonText-Bold.ttf");
+}
+@font-face {
+  font-family: Libre-C-Italic;
+  src: url("fonts/Libre-Caslon-Text-master/fonts/TTF/LibreCaslonText-Italic.ttf");
 }
 
 body {
-  /* background-color: #000000; */
   background-image: url("../imgs/patterns/image-dphqi1s5.png");
-  font-family: caviar;
+  font-family: acari;
   font-size: 14px;
   color: #ffffff;
 }
 h1 {
-  font-family: theboldfont;
+  font-family: myfirstfont;
+  text-transform: uppercase;
   font-size: 25px;
   color: #37ea28;
   margin: 22px;
@@ -44,11 +48,15 @@ p {
   text-align: justify;
 }
 h2 {
+  font-family: acari-bold;
   font-size: 20px;
-  font-family: caviarbold;
   margin: 10px;
 }
-a {
+body h3{
+  font-family: acari-bold;
+}
+body a {
+  font-family: acari;
   font-size: 12px;
   margin: 10px;
   color: #ffffff;
@@ -71,25 +79,27 @@ nav {
   align-items: center;
 }
 .nav-title {
-  font-family: theboldfont;
   font-weight: bold;
 }
 .nav-title a {
+  font-family: myfirstfont;
   color: #000000;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 .nav-title a:hover{
   color: #ffffff;
 }
 .nav-a {
   color: #000000;
-  font-family: caviarbold;
   font-size: 13px;
 }
 .nav-a:hover {
   color: #ffffff;
   font-size: 15px;
+}
+.nav-menu a{
+  font-family: acari-bold;
 }
 
 .cont-fanfic img:hover{

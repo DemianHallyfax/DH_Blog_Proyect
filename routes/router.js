@@ -3,7 +3,11 @@ const express = require("express"),
   router = express.Router(),
   articlesJSON = require("../info_json/articlesTEST.json"),
   stories = require("../info_json/stories-testing.json"),
-  { paginatedResults } = require("./functions/func");
+  { paginatedResults } = require("./functions/func"),
+  marked = require("marked"),
+  createDomPurify = require("dompurify"),
+  { JSDOM } = require("jsdom"),
+  dompurify = createDomPurify(new JSDOM().window);
 
 /*------------------------------------------
 //MIDLEWARE
@@ -65,6 +69,9 @@ router.get("/blog/:id", async (req, res) => {
   let renderTitle = findValue.title,
     renderArticle = findValue.article,
     renderImg = findValue.img;
+
+  renderArticle = dompurify.sanitize(marked.parse(renderArticle));
+  
 
   res.render("blog-articles/articlesSheet", {
     renderTitle,
