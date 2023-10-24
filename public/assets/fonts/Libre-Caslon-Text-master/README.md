@@ -1,5 +1,4 @@
 Libre Caslon Text Fonts
-======================
 
 The Libre Caslon fonts are unique Caslons. They are different to all other caslons out there.
 
@@ -27,6 +26,7 @@ Libre Caslon Text also include some nice, extra Open Type features:
 - The italic style includes an alternate Ampersand (ss01)
 
 ## License
+
 
 - Libre Caslon is licensed under the SIL Open Font License v1.1 (<http://scripts.sil.org/OFL>)
 - To view the copyright and specific terms and conditions please refer to [OFL.txt](https://github.com/impallari/Libre-Caslon-Text/blob/master/OFL.txt)
