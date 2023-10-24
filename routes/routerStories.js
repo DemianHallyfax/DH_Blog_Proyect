@@ -7,12 +7,6 @@ const express = require("express"),
   app = express(),
   storiesJSON = require("../info_json/stories-testing.json");
 
-  marked.use({
-
-  })
-
-
-
 /*---------------------------------------------
 MIDLEWARE
 ---------------------------------------------*/

@@ -1,0 +1,23 @@
+.gallery-content a{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.gallery-content{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+}
+
+.gallery-title h1{
+    border-bottom: #ffffff solid 2px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}

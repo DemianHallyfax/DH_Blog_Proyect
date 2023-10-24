@@ -34,6 +34,9 @@ body {
   font-size: 14px;
   color: #ffffff;
 }
+body b{
+  font-family: acari-bold;
+}
 h1 {
   font-family: myfirstfont;
   text-transform: uppercase;
