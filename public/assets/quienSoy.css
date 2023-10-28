@@ -94,6 +94,32 @@
 .Audiphon3 p{
     margin: 20px;
 }
+.mi-fursona{
+    border-bottom: #b1b1b1 solid;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+.mi-fursona h1{
+    display: flex;
+    align-self: center;
+}
+.mi-fursona img{
+    width: 500px;
+
+    display: flex;
+    align-self: center;
+}
+.mi-fursona a{
+    margin: 0px;
+    font-size: 14px;
+    color: #37ea28;
+}
+.fursona-description{
+    margin: 40px;
+}
+
 .Agradecimientos{
     margin: auto;
     width: 70%;
