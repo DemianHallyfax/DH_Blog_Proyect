@@ -2,8 +2,15 @@
   font-family: theboldfont;
   src: url("fonts/the-bold-font/theboldfont.ttf");
 }
+.cont-article{
+  width: 90%;
+}
+.cont-blog{
+  width: 90%;
+}
 .cont-blog h2 a{
   font-size: 20px;
+  font-family: acari-bold;
 }
 .content {
     display: flex;
@@ -65,4 +72,42 @@
 .pagination-blog a:hover{
   color: #37ea28;
   font-size: 27px;
+}
+
+/* --------------- */
+
+.cont-article p{
+  /* font-family:'Times New Roman', Times, serif; */
+  font-family: Libre-C;
+  font-size: 14px;
+  width: auto;
+  margin: 22px;
+  line-height: 1.5;
+
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+.cont-article em{
+  font-family: Libre-C-Italic;
+}
+.cont-article strong{
+  font-family: Libre-C-Bold;
+}
+.cont-article h1{
+  font-family: myfirstfont;
+  border-bottom: #ffffff solid 2px;
+}
+.cont-article h2{
+  font-family: Libre-C-Bold;
+  font-size: 25px;
+  margin: 20px;
+}
+.cont-article h3{
+  font-family: Libre-C-Bold;
+  margin-left: 40px;
+}
+
+.cont-article img{
+  margin: 40px;
 }

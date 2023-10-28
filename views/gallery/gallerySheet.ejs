@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demian Hallyfax</title>
+    <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../public/assets/style-gallery.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container">
+
+      <div class="frame">
+        <div class="photo">
+            <img src="<%= renderImage %>" alt="">
+            <h1><%= renderTitle %></h1>
+            <p><%= renderDescription %></p>
+        </div>
+      </div>
+
+    </div>
+    
+    <%- include('../partials/footer') %>
+  </body>
+</html>

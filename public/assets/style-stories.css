@@ -7,10 +7,12 @@
     margin: 10px;
     padding: 20px;
 }
+.fanfic-main{
+    width: 90%;
+}
 .fanfic-description{
     margin: 10px;
     border-bottom: solid 1px #ffffff;
-
 }
 .fanfic-main a{
     font-size: 15px;
@@ -50,4 +52,56 @@
     width: 150px;
     margin: 10px;
     border: solid 4px #37ea28;
+}
+
+.storie-content p{
+  line-height: 1.5;
+
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+.container-reading{
+    display: flex;
+    flex-direction: column;
+}
+.storie-cover{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 2px #ffffff;
+}
+.storie-cover img{
+    width: 100px;
+    margin: 20px;
+}
+
+.storie-content{
+    /* font-family:'Times New Roman', Times, serif; */
+    font-family: Libre-C;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.storie-content p{
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.storie-content h1{
+    /* font-family:'Times New Roman', Times, serif; */
+    font-family: myfirstfont;
+    font-size: 30px;
+    margin: 40px;
+    text-align: center;
+    border: none;
+}
+.storie-content h2{
+    font-family: Libre-C-Bold;
+}
+
+.storie-content strong{
+    font-family: Libre-C-Bold;
+}
+.storie-content em{
+    font-family: Libre-C-Italic;
 }

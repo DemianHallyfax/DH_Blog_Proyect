@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demian Hallyfax</title>
     <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
-    <link rel="stylesheet" href="../public/assets/gallery-styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../public/assets/style-gallery.css" type="text/css" />
     <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
   </head>
   <body>
@@ -20,47 +20,16 @@
           </div>
     
           <div class="gallery-content">
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
+            <% for(let i = 0; i < gallery.length; i++) {%>
+            <a href="/Gallery/<%= gallery[i].id %>">
+                <img src="<%= gallery[i].placeholder %>" alt="">
             </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
-            <a href="">
-                <img src="https://placehold.co/260x260" alt="">
-            </a>
+            <% } %>
           </div>
       </div>
 
     </div>
-
+    
     <%- include('./partials/footer') %>
   </body>
 </html>

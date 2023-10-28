@@ -39,7 +39,7 @@ storiesRouter.get("/stories/:id", async (req, res) => {
   let renderTitle = findValue.title,
     renderStorie = findValue.storie,
     renderTags = findValue.tags,
-    renderDescription = findValue.tags;
+    renderDescription = findValue.description;
 
     
 

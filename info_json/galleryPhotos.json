@@ -1,0 +1,98 @@
+[
+    {
+        "gallery": [
+            
+            {
+                "id": "1",
+                "title":"IMG 1", 
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 2,
+                "title":"IMG 2",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 3,
+                "title":"IMG 3",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 4,
+                "title":"IMG 4",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 5,
+                "title":"IMG 5",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 6,
+                "title":"IMG 6",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 7,
+                "title":"IMG 7",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 8,
+                "title":"IMG 8",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 9,
+                "title":"IMG 9",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 10,
+                "title":"IMG 10",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 11,
+                "title":"IMG 11",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum tempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 12,
+                "title":"IMG 12",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum \n\ntempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            },
+            {
+                "id": 13,
+                "title":"IMG 13",
+                "placeholder": "https://placehold.co/260x260",
+                "image": "https://placehold.co/1080x720",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum \n\ntempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
+            }
+        ]
+    }
+]

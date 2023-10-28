@@ -1,9 +1,7 @@
 .gallery-content a{
     margin: 0px;
     padding: 0px;
-
 }
-
 .gallery-content{
     margin: 20px;
     display: grid;
@@ -17,7 +15,22 @@
 }
 
 .gallery-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-self: center;
+}
+.photo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.photo h1{
+    display: flex;
+    align-self: flex-start;
+}
+.photo p{
+    white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
 }
