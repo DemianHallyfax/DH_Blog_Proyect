@@ -1,11 +1,13 @@
+
 const express = require("express"),
-  marked = require("marked"),
-  createDomPurify = require("dompurify"),
-  { JSDOM } = require("jsdom"),
-  dompurify = createDomPurify(new JSDOM().window),
-  storiesRouter = express.Router(),
-  app = express(),
-  storiesJSON = require("../info_json/stories-testing.json");
+marked = require("marked"),
+createDomPurify = require("dompurify"),
+{ JSDOM } = require("jsdom"),
+dompurify = createDomPurify(new JSDOM().window),
+storiesRouter = express.Router(),
+app = express(),
+storiesJSON = require("../info_json/stories-testing.json"),
+{ paginatedResults } = require("./functions/func");
 
 /*---------------------------------------------
 MIDLEWARE
@@ -41,7 +43,16 @@ storiesRouter.get("/stories/:id", async (req, res) => {
     renderTags = findValue.tags,
     renderDescription = findValue.description;
 
-    
+  const chapter = parseInt(req.query.chapter);
+
+  let value = {};
+
+     if (renderStorie.length >= 2) {
+        value = paginatedResults(1, 1, renderStorie).results;
+        renderStorie = value.results[0].chapter;
+    }
+
+    console.log(renderStorie);
 
     renderStorie = dompurify.sanitize(marked.parse(renderStorie));
 
