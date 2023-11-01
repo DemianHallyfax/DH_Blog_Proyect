@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demian Hallyfax</title>
     <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
-    <link rel="stylesheet" href="/assets/style-stories.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets/style-stories.css" type="text/css" />
     <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
   </head>
   <body>
@@ -17,32 +17,37 @@
           <div>
             <img src="https://placehold.co/150x200" alt="" />
           </div>
+
+          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ "METADATA" DE LA HISTORIA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
           <div>
-              <h1><%= renderTitle %></h1>
-              <p>[<%= renderTags %>]</p> 
-              <p>(F E C H A)</p>
-              <p><%= renderDescription %></p>
+            <h1><%= renderTitle %></h1>
+            <p>[<%= renderTags %>]</p>
+            <p>(F E C H A)</p>
+            <p><%= renderDescription %></p>
           </div>
         </div>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ RENDERIZACIÓN DE LA HISTORIA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div class="storie-content">
-              <div class="render-storie">
-                <%- renderStorie %>
-              </div>
-
-            <div class="pagination-stories">
-              <% if(rendPrevius){%>
-                <p><a href="/stories/<%= id %>?chapter=<%= rendPrevius %>"><</a></p>
-              <% } %>
-    
-              <% for(let i = 0; i < rendIndex.length; i++) {%>
-                <p><a href="/stories/<%= id %>?chapter=<%= i + 1 %>"><%= i + 1 %></a></p>
-              <%}%>
-      
-              <% if(rendNext){%>
-                <p><a href="/stories/<%= id %>?chapter=<%= rendNext %>">></a></p>
-              <% } %>
-            </div>
-
+          <div class="render-storie"><%- renderStorie %></div>
+          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ PAGINACIÓN DE CAPITULOS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <div class="pagination-stories">
+            <% if(rendPrevius){%>
+            <p><a href="/stories/<%= id %>?chapter=<%= rendPrevius %>"><</a></p>
+            <% } %> <% for(let i = 0; i < rendIndex.length; i++) {%>
+            <p>
+              <a href="/stories/<%= id %>?chapter=<%= i + 1 %>"><%= i + 1 %></a>
+            </p>
+            <%}%> <% if(rendNext){%>
+            <p><a href="/stories/<%= id %>?chapter=<%= rendNext %>">></a></p>
+            <% } %>
+          </div>
         </div>
       </div>
     </div>

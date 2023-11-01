@@ -13,49 +13,64 @@
     <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
   </head>
   <body>
-
     <%- include('./partials/nav') %>
 
     <div class="container">
       <div class="cont-about"><%- include('./partials/about') %></div>
-    
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Una descripción simple de la sección
 
-  — Inventarte algo para que esto suene chido, pero si no se te ocurre nada. ELIMINA ESTA
-    SECCIÓN.  
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ DESCRIPCIÓN DE LAS HISTORIAS Y PORQUE LAS TENGO AQUI~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
       <div class="fanfic-main">
         <h1>Mis Historias</h1>
         <div class="fanfic-description">
           <p>
-            Hace tiempo, solía ser activo en Fanfiction y Watpad. De hecho, llegué a subir historias a esos sitios, pero nunca me terminaron de convencer. FF siempre fue limitante, ya que solo se pueden subir, en efecto, Fanfics, por lo que todo trabajo original o tiene que tener tags qué se le parezca o aparecer en un fandom medio olvidado y que nadie lee. Watpad permite las historias originales y también Fanfics, pero estos últimos siempre tienen problemillas con la propia página, además de que su app es tan engorrosa qué ya no quiero tenerla en ninguno de mis dispositivos otra vez.
+            Hace tiempo, solía ser activo en Fanfiction y Watpad. De hecho,
+            llegué a subir historias a esos sitios, pero nunca me terminaron de
+            convencer. FF siempre fue limitante, ya que solo se pueden subir, en
+            efecto, Fanfics, por lo que todo trabajo original o tiene que tener
+            tags qué se le parezca o aparecer en un fandom medio olvidado y que
+            nadie lee. Watpad permite las historias originales y también
+            Fanfics, pero estos últimos siempre tienen problemillas con la
+            propia página, además de que su app es tan engorrosa qué ya no
+            quiero tenerla en ninguno de mis dispositivos otra vez.
           </p>
           <p>
-            Y si no existe una página que se adapte a mis necesidades. ¿Por qué no hacer la mía?
+            Y si no existe una página que se adapte a mis necesidades. ¿Por qué
+            no hacer la mía?
           </p>
           <p>
-            Aquí encontrarás tanto Fanfics, historias originales, intentos de hacer uno –o varios– libros, antologías, oneshots, toda aquella forma de expresión con palabras y texto plano.<br>He intentado diseñar la forma de leer estas historias lo más minimalista y cómoda posible. Esto para que sea lo más fácil de leerlas. Y curiosamente eso me llevó a rediseñar la página entera 3 veces para que se adecuará a este estilo.
+            Aquí encontrarás tanto Fanfics, historias originales, intentos de
+            hacer uno –o varios– libros, antologías, oneshots, toda aquella
+            forma de expresión con palabras y texto plano.<br />He intentado
+            diseñar la forma de leer estas historias lo más minimalista y cómoda
+            posible. Esto para que sea lo más fácil de leerlas. Y curiosamente
+            eso me llevó a rediseñar la página entera 3 veces para que se
+            adecuará a este estilo.
           </p>
           <p>
-            Así que, diviértete leyendo estas historias en el orden que tu quieras y espero te gusten mucho.<br>Si quieres mandarme un mensaje o alguna opinión directa con migo puedes hacerlo en [micorreo@midominio.com]
+            Así que, diviértete leyendo estas historias en el orden que tu
+            quieras y espero te gusten mucho.<br />Si quieres mandarme un
+            mensaje o alguna opinión directa con migo puedes hacerlo en
+            [micorreo@midominio.com]
           </p>
         </div>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Chunk de Renderizacion de Tarjetas de presentación para las historias
-
-  — Hacer que las imagenes tambien actuen como hypervinculos
-    + Cambiar el :hover de las mismas
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CATALOGO DE HISTORIAS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div class="fanfic-covers-list">
           <% for(let i = 0; i+1 <= storiesRange; i++){ %>
           <div class="fanfic-card">
-            <a href="/stories/<%= stories[i].idName %>?chapter=1"><img src="<%= stories[i].img %>" alt="" /></a>
+            <a href="/stories/<%= stories[i].idName %>?chapter=1">
+              <img src="<%= stories[i].img %>" alt="" />
+            </a>
+
             <h2><%= stories[i].title %></h2>
             <p>[<%= stories[i].tags %>]</p>
             <p><%= stories[i].description %></p>
-            <a href="/stories/<%= stories[i].idName %>?chapter=1">Leer mas -></a>
+            <a href="/stories/<%= stories[i].idName %>?chapter=1"
+              >Leer mas -></a>
           </div>
           <% } %>
         </div>
