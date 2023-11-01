@@ -35,8 +35,10 @@ storiesRouter.get("/stories/index", (req, res) => {
 /*---------------------------------------------
 STORIES
 ---------------------------------------------*/
-storiesRouter.get("/stories/:id", async (req, res) => {
+storiesRouter.get("/stories/:id", async (req, res, next) => {
   const findValue = await stories.find((x) => x.idName === req.params.id);
+
+  const id = req.params.id;
 
   let renderTitle = findValue.title,
     renderStorie = findValue.storie,
@@ -45,22 +47,36 @@ storiesRouter.get("/stories/:id", async (req, res) => {
 
   const chapter = parseInt(req.query.chapter);
 
-  let value = {};
+  
 
-     if (renderStorie.length >= 2) {
-        value = paginatedResults(1, 1, renderStorie).results;
-        renderStorie = value.results[0].chapter;
-    }
+  let rendResult = paginatedResults(chapter, 1, renderStorie),
+    rendPrevius = rendResult.previus.page,
+    rendNext = rendResult.next.page,
+    rendIndex = rendResult.index;
 
-    console.log(renderStorie);
+  // if (chapter > rendIndex.length) {
+  //   res.redirect("/stories/index");
+
+  //   next();
+  // }
+
+    renderStorie = rendResult.results.results[0].chapter;
 
     renderStorie = dompurify.sanitize(marked.parse(renderStorie));
+
+  
 
   res.render("stories/storieSheet", {
     renderTitle,
     renderStorie,
     renderDescription,
     renderTags,
+    rendNext,
+    rendPrevius,
+    rendIndex,
+    id
   });
+
+  
 });
 module.exports = storiesRouter;

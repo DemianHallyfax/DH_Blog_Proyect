@@ -25,11 +25,24 @@
           </div>
         </div>
         <div class="storie-content">
-            <h1>Capitulo I</h1>
-              <div>
+              <div class="render-storie">
                 <%- renderStorie %>
               </div>
-            <hr>
+
+            <div class="pagination-stories">
+              <% if(rendPrevius){%>
+                <p><a href="/stories/<%= id %>?chapter=<%= rendPrevius %>"><</a></p>
+              <% } %>
+    
+              <% for(let i = 0; i < rendIndex.length; i++) {%>
+                <p><a href="/stories/<%= id %>?chapter=<%= i + 1 %>"><%= i + 1 %></a></p>
+              <%}%>
+      
+              <% if(rendNext){%>
+                <p><a href="/stories/<%= id %>?chapter=<%= rendNext %>">></a></p>
+              <% } %>
+            </div>
+
         </div>
       </div>
     </div>

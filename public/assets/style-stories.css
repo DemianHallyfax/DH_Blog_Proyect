@@ -77,6 +77,8 @@
 }
 
 .storie-content{
+    display: flex;
+    flex-direction: column;
     /* font-family:'Times New Roman', Times, serif; */
     font-family: Libre-C;
     margin-top: 10px;
@@ -105,3 +107,33 @@
 .storie-content em{
     font-family: Libre-C-Italic;
 }
+
+.render-storie{
+    border-bottom: solid 2px #ffffff;
+
+}
+
+
+.pagination-stories{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+  
+    margin: 5px;
+    width: 50%;
+  }
+.pagination-stories p{
+    display: flex;
+    margin: 0%;
+  }
+.pagination-stories a{
+    color: #a5a5a5;
+    font-size: 20px;
+    font-family: Libre-C;
+  }
+.pagination-stories a:hover{
+    color: #37ea28;
+    font-size: 27px;
+  }
