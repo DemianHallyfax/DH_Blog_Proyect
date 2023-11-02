@@ -18,7 +18,7 @@ app.use("/public", express.static("public"));
 /*------------------------------------------
 VARIABLES IMPORTANTES 
 ------------------------------------------*/
-let articles = articlesJSON[0].articles;
+let articles = articlesJSON;
 
 articles.reverse();
 var articleRange = parseInt(articles.length);
@@ -42,7 +42,7 @@ router.get("/blog", async (req, res) => {
   const page = parseInt(req.query.page),
     limit = parseInt(req.query.limit),
     rendResult = await paginatedResults(page, limit, articles),
-    artRend = rendResult.results.results,
+    artRend = rendResult.results, 
     artRendNext = rendResult.next.page,
     artRendPrevius = rendResult.previus.page,
     indexLength = rendResult.index;

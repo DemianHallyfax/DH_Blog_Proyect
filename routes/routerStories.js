@@ -17,7 +17,7 @@ app.use("/public", express.static("public"));
 /*---------------------------------------------
 VARIABLES IMPORTANTES 
 ---------------------------------------------*/
-let stories = storiesJSON[0].stories;
+let stories = storiesJSON;
 stories.reverse();
 let storiesRange = parseInt(Object.keys(stories[0]).length);
 
@@ -32,7 +32,7 @@ storiesRouter.get("/stories/index", (req, res) => {
 });
 
 /*---------------------------------------------
-STORIES
+RENDERIZACIÓN DE HISTORIAS Y SUS CAPITULOS
 ---------------------------------------------*/
 storiesRouter.get("/stories/:id", async (req, res, next) => {
   const findValue = await stories.find((x) => x.idName === req.params.id),
@@ -48,8 +48,7 @@ storiesRouter.get("/stories/:id", async (req, res, next) => {
     rendNext = rendResult.next.page,
     rendIndex = rendResult.index;
 
-  renderStorie = rendResult.results.results[0].chapter;
-
+  renderStorie = rendResult.results[0].chapter;
   renderStorie = dompurify.sanitize(marked.parse(renderStorie));
 
   res.render("stories/storieSheet", {

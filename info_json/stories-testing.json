@@ -1,6 +1,4 @@
 [
-  {
-    "stories": [
       {
         "idName": "storieOne",
         "title": "Titulo Uno de la Historia",
@@ -76,6 +74,4 @@
           }
         ]
       }
-    ]
-  }
 ]

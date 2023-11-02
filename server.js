@@ -2,7 +2,6 @@ const express = require("express"),
   app = express(),
   storiesRouter = require("./routes/routerStories"),
   articleRouter = require("./routes/router"),
-  paginationRouter = require("./routes/pagination"),
   routerGallery = require("./routes/routerGallery");
 
 /*---------------------------------------------
@@ -15,7 +14,6 @@ ROUTERS
 ---------------------------------------------*/
 app.use(articleRouter);
 app.use(storiesRouter);
-app.use(paginationRouter);
 app.use(routerGallery);
 
 /*---------------------------------------------
