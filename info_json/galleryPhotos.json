@@ -1,7 +1,4 @@
 [
-    {
-        "gallery": [
-            
             {
                 "id": "1",
                 "title":"IMG 1", 
@@ -93,6 +90,4 @@
                 "image": "https://placehold.co/1080x720",
                 "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repudiandae cum at magni. Recusandae eos vel sapiente ex. Dignissimos amet repellat delectus dolore cumque quia cum neque enim, sint facere praesentium provident quasi error vitae culpa incidunt accusamus sunt. Fugiat enim id, placeat repudiandae quidem rem voluptates deleniti maxime facere est ipsa magni error minima vero dolore qui. Officiis repellendus ipsum et earum tempora, voluptates laboriosam obcaecati ratione, ipsa quos recusandae eos aut, alias rerum \n\ntempore molestias? Sed perferendis dolore, consectetur cumque ab amet? Labore earum eos aspernatur totam nostrum maiores asperiores nulla corrupti sapiente, praesentium, quos aliquid. Asperiores, recusandae?"
             }
-        ]
-    }
 ]

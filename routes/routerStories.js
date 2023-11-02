@@ -5,7 +5,7 @@ const express = require("express"),
   dompurify = createDomPurify(new JSDOM().window),
   storiesRouter = express.Router(),
   app = express(),
-  storiesJSON = require("../info_json/stories-testing.json"),
+  stories= require("../info_json/stories-testing.json"),
   { paginatedResults } = require("./functions/func");
 
 /*---------------------------------------------
@@ -17,7 +17,6 @@ app.use("/public", express.static("public"));
 /*---------------------------------------------
 VARIABLES IMPORTANTES 
 ---------------------------------------------*/
-let stories = storiesJSON;
 stories.reverse();
 let storiesRange = parseInt(Object.keys(stories[0]).length);
 

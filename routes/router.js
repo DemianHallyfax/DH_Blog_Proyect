@@ -1,7 +1,7 @@
 const express = require("express"),
   app = express(),
   router = express.Router(),
-  articlesJSON = require("../info_json/articlesTEST.json"),
+  articles = require("../info_json/articlesTEST.json"),
   stories = require("../info_json/stories-testing.json"),
   { paginatedResults } = require("./functions/func"),
   marked = require("marked"),
@@ -18,8 +18,6 @@ app.use("/public", express.static("public"));
 /*------------------------------------------
 VARIABLES IMPORTANTES 
 ------------------------------------------*/
-let articles = articlesJSON;
-
 articles.reverse();
 var articleRange = parseInt(articles.length);
 

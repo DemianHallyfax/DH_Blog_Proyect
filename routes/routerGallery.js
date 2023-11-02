@@ -1,7 +1,7 @@
 const express = require("express"),
   app = express(),
   routerGallery = express.Router()
-  galleryPhotos = require("../info_json/galleryPhotos.json");
+  gallery = require("../info_json/galleryPhotos.json");
 
 /*---------------------------------------------
 MIDLEWARE
@@ -12,8 +12,6 @@ app.use("/public", express.static("public"));
 /*---------------------------------------------
 VARIABLES IMPORTANTES 
 ---------------------------------------------*/
-
-let gallery = galleryPhotos[0].gallery;
 gallery.reverse();
 
 // console.log(gallery);
