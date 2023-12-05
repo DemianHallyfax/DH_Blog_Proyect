@@ -168,7 +168,6 @@ footer{
   font-size: 25px;
   color: #000000;
   float: right;
-  line-height: auto;
   cursor: pointer;
   display: none;
 }
