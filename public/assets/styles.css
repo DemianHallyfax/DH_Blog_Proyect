@@ -1,7 +1,7 @@
 @import url("./indexStyles/content.css");
 @import url("./indexStyles/fanfic.css");
 @import url("./partials/about.css");
-@import url("./indexStyles/");
+@import url("./responsive/responsive.css");
 
 @font-face {
   font-family: acari;
@@ -33,7 +33,7 @@ body {
   font-family: acari;
   font-size: 14px;
   color: #ffffff;
-  overflow-x: hidden;
+  margin: 0px;
 }
 body b{
   font-family: acari-bold;
@@ -77,6 +77,7 @@ nav {
   margin-bottom: 10px;
   background-color: #37ea28;
   border-bottom: #ffffff solid 2px;
+  top: 0;
 
   display: flex;
   flex-direction: row;
@@ -90,18 +91,26 @@ nav {
   font-family: myfirstfont;
   color: #000000;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
+  padding: 10px;
 }
 .nav-title a:hover{
   color: #ffffff;
+  padding: 10px;
+  background: #000000;
+  border-radius: 5px;
 }
 .nav-a {
   color: #000000;
-  font-size: 13px;
+  font-size: 16px;
+  padding: 10px;
 }
 .nav-a:hover {
+  background: #131313;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
 }
 .nav-menu a{
   font-family: acari-bold;
@@ -116,7 +125,8 @@ nav {
   margin-bottom: 40px;
   padding: 20px;
   width: 80%;
-  background: #00000089;
+  /* background: #00000089; */
+  background: #000000;
   border: #37ea28 solid 2px;
 
 
@@ -152,4 +162,16 @@ footer{
 .A3P p{
   font-size: 12px;
   text-align: center;
+}
+
+.checkbtn{
+  font-size: 25px;
+  color: #000000;
+  float: right;
+  line-height: auto;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
 }
