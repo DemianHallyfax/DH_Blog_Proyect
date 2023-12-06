@@ -1,0 +1,9 @@
+@media (max-width: 952px) {
+    div.cont-about{
+        display: none;
+    }
+    div.container{
+        width: 98%;
+        padding: 0px;
+    }
+}

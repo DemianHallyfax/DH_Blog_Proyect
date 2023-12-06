@@ -30,6 +30,7 @@
 
 body {
   background-image: url("../imgs/patterns/image-dphqi1s5.png");
+  background-attachment: fixed;
   font-family: acari;
   font-size: 14px;
   color: #ffffff;

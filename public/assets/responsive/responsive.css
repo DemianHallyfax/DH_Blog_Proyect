@@ -10,6 +10,12 @@
     display: flex;
     flex-direction: column;
   }
+  div.container p{
+    font-size: 16px;
+  }
+  div.container h2{
+    font-size: 25px;
+  }
 
   body nav {
     position: fixed;
@@ -116,16 +122,11 @@ div.cont-fanfic{
     flex-direction: column;
     align-items: center;
     padding: 0px;
-
-    /* display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px; */
 }
 
 /* 
 -----------------------------------
-QUIEN SOY
+FOOTER
 ----------------------------------- 
 */
 
@@ -143,7 +144,9 @@ div.footer-first{
 QUIEN SOY
 ----------------------------------- 
 */
-
+div.intro p{
+  font-size: 12px;
+}
 div.explicacion{
   display: flex;
   flex-direction: column;
@@ -172,6 +175,9 @@ div.Audiphon3 h2{
   font-size: 25px;
   text-align: center;
 }
+div.Audiphon3 img{
+  width: 100%;
+}
 div.YT{
   display: flex;
   flex-direction: column-reverse;
@@ -180,7 +186,7 @@ div.YT{
   margin-bottom: 20px;
 }
 div.YT img{
-  width:300px;
+  width: 100%;
   margin: 10px;
 }
 div.YT h2{
@@ -198,7 +204,7 @@ div.YT a{
   font-size: 18px;
 }
 div.mi-fursona img{
-  width: 300px;
+  width: 100%;
 }
 div.fursona-description{
   margin: 0px;
@@ -222,5 +228,121 @@ div.Agradecimientos{
 }
 div.Agradecimientos p{
   font-size: 16px;
+}
+
+/* 
+-----------------------------------
+BLOG
+----------------------------------- 
+*/
+
+div.about-blog-list{
+  display: none;
+}
+div.content p{
+  margin: 0px;
+  margin-bottom: 10px;
+}
+div.cont-blog h2 a {
+  font-size: 25px;
+}
+div.pagination-blog a{
+  font-size: 25px;
+  text-align: center;
+}
+div.pagination-blog{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+div.cont-article img{
+  width: 90%;
+  margin: 0px;
+  
+}
+div.cont-article{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.cont-article p{
+  margin: 10px;
+  /* margin-bottom: 20px; */
+}
+
+/* 
+-----------------------------------
+STORIES
+----------------------------------- 
+*/
+
+div.fanfic-main{
+  width: 100%;
+}
+div.fanfic-main h1{
+  text-align: center;
+}
+div.fanfic-main p{
+  margin: 0px;
+  margin-bottom: 20px;
+}
+div.fanfic-covers-list{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+div.fanfic-main a{
+  font-size: 16px; 
+}
+div.fanfic-card h2{
+  text-align: center;
+}
+a.storie-botom{
+  background-color: #37ea28;
+  padding: 10px;
+  color: #000000;
+  border-radius: 5px;
+}
+a.storie-botom:hover{
+  color: #000000;
+}
+
+div.storie-cover{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+div.storie-cover img{
+  width: auto;
+}
+
+div.storie-content img{
+  width: 90%;
+}
+/* 
+-----------------------------------
+GALLERY
+----------------------------------- 
+*/
+div.gallery-content{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+div.gallery-content img{
+  width: 100%;
+}
+div.gallery-container{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+div.photo img{
+  width: 100%;
 }
 }
