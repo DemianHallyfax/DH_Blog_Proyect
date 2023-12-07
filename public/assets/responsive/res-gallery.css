@@ -1,0 +1,19 @@
+@media (max-width: 952px) {
+  div.gallery-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  div.gallery-content img {
+    width: 100%;
+  }
+  div.gallery-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  div.photo img {
+    width: 80%;
+  }
+}

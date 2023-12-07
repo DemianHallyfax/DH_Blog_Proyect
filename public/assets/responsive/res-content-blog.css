@@ -1,0 +1,49 @@
+@media (max-width: 952px) {
+  div.cont-blog {
+    width: 100%;
+  }
+  div.cont-blog h1 {
+    text-align: center;
+  }
+  div.content {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  div.content img {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  div.content h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+  div.content a {
+    margin: 0px;
+  }
+  div.content p {
+    font-size: 20px;
+    width: auto;
+  }
+
+  div.cont-fanfic {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px;
+  }
+  div.cont-fanfic img {
+    width: 80%;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  div.footer-first{
+    display: flex;
+    flex-direction: column;
+  }
+}
