@@ -16,17 +16,7 @@
       <div class="cont-about">
         <%- include('./partials/about') %>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Listado del nombre de todos los articulos.
-Si.
-TODOS.
-Que no se escape ninguno. Esto para funcionar como indice principal de busqueda.
-
-  — En el momento en el que se empiecen a usar fechas, agregarselas antes del titulo entre corchetes
-      " o [xx/xx/xxxx] — <Titulo del Articulo> "
-      " o [xx/xx/xxxx] — <Titulo del Articulo> "
-      " o [xx/xx/xxxx] — <Titulo del Articulo> "
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~ LISTADO DE TODAS LAS ENTRADAS ~~~~~ -->
         <div class="about-blog-list">
           <h2>Todas las entradas:</h2>
           <ul>
@@ -37,14 +27,7 @@ Que no se escape ninguno. Esto para funcionar como indice principal de busqueda.
         </div>
       </div>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Visualizacion de las entradas de blog
-
-  — Crear paginacion para mostrar de 10 en 10 los articulos.
-  — Intentar mejorar la presentación de los mismos. La estructura "IMAGEN/TITULO/
-    DESCRIPCIÓN" ya no me convence tanto...
-  — Hacer pruebas con la previsualización de las imagenes.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~ LISTADO DE ENTRADAS DEL BLOG ~~~~~ -->
       <div class="cont-blog">
         <h1>El Blog de Demian</h1>
 
@@ -60,6 +43,7 @@ Visualizacion de las entradas de blog
         </div>
         <% } %>
 
+<!-- ~~~~~ MENU DE NAVEGACIÓN DE LAS ENTRADAS ~~~~~ -->
         <div class="pagination-blog">
           <% if(artRendPrevius){%>
             <p><a href="/blog?page=<%= artRendPrevius %>&limit=5"><</a></p>

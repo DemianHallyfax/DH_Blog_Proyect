@@ -61,6 +61,9 @@
   div.mi-fursona img {
     width: 100%;
   }
+  div.mi-fursona h1{
+    text-align: center;
+  }
   div.fursona-description {
     margin: 0px;
   }
