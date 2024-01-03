@@ -14,8 +14,6 @@ VARIABLES IMPORTANTES
 ---------------------------------------------*/
 gallery.reverse();
 
-// console.log(gallery);
-
 /*---------------------------------------------
 GALLERY
 ---------------------------------------------*/
@@ -44,6 +42,5 @@ function findPhoto(id, module) {
   const value = module.find((x) => x.id == id);
   return value;
 }
-// console.log(findPhoto(1, gallery));
 
 module.exports = routerGallery;
