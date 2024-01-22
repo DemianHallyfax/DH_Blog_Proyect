@@ -3,12 +3,20 @@ const express = require("express"),
   storiesRouter = require("./routes/routerStories"),
   articleRouter = require("./routes/router"),
   routerGallery = require("./routes/routerGallery"),
-  PORT = 5000;
+  routerSGDH = require('./routes/routerSGDH')
+  PORT = 5000,
+  mongoose = require('mongoose');
 
 /*---------------------------------------------
 MIDLEWARE
 ---------------------------------------------*/
 app.set("view engine", "ejs");
+try {
+  mongoose.connect('mongodb://127.0.0.1:27017/Demian_Hallyfax_Blog');
+  console.log('Data base connected.');
+} catch (error) {
+  console.log(error);
+}
 
 /*---------------------------------------------
 ROUTERS
@@ -16,6 +24,7 @@ ROUTERS
 app.use(articleRouter);
 app.use(storiesRouter);
 app.use(routerGallery);
+app.use(routerSGDH);
 
 /*---------------------------------------------
 EXTRAS
