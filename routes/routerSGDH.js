@@ -12,6 +12,25 @@ routerSGDH.get('/SGDH/lobby', (req, res) => {
 
 routerSGDH.get('/SGDH/articles', (req, res) => {
     res.render('SGDH/articles', articles);
-})
+});
+
+routerSGDH.get('/SGDH/articles/new', (req, res) => {
+    res.render('SGDH/new');
+});
+
+routerSGDH.get('/SGDH/articles/:id', async (req, res) => {
+    const id = req.params.id,
+       findArticle = await articles.find((x) => x.id === id);
+    
+    const renderArticle = {
+        title: findArticle.title,
+        img: findArticle.img,
+        imgTemp: findArticle.imgTemplate,
+        description: findArticle.description,
+        article: findArticle.article
+    }
+    
+    res.render('SGDH/articleEdit', {renderArticle});
+});
 
 module.exports = routerSGDH;

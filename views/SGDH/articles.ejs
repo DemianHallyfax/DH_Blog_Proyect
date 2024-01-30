@@ -11,19 +11,25 @@
     <div class="container">
       <h1>Articles</h1>
 
+      <div class="btn-new">
+        <a href="/SGDH/articles/new">New Article</a>
+      </div>
+
       <% for(let i = 0; i < articles.length; i++){ %>
+
       <div class="article-card">
         <div><img src="<%= articles[i].imgTemplate %>" alt="" /></div>
         <div class="card-description">
           <h2><%= articles[i].title %></h2>
           <p><%= articles[i].description %></p>
           <div class="card-selection">
-            <a href="" class="edit-btn">Edit</a> <a href="" class="delete-btn">Delete</a>
+            <a href="/SGDH/articles/<%= articles[i].id %>" class="edit-btn">Edit</a>
+            <a href="" class="delete-btn">Delete</a>
           </div>
         </div>
       </div>
-      <% } %>
 
+      <% } %>
     </div>
   </body>
 </html>

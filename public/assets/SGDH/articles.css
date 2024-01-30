@@ -20,11 +20,11 @@
     font-family: acari-bold;
 }
 .edit-btn{
-    background: #37ea28;
+    background: #404040;
     border-radius: 3px;
 }
 .edit-btn:hover{
-    background: #27a21c;
+    background: #555454;
     color: #000000;
 }
 .delete-btn{
@@ -34,4 +34,19 @@
 .delete-btn:hover{
     background: #750909;
     color: #000000;
+}
+.btn-new{
+    margin: 20px;
+}
+.btn-new a{
+    background: #37ea28;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 20px;
+    width: initial;
+    font-family: acari-bold;
+
+}
+.btn-new a:hover{
+    background: #27a21c;
 }
