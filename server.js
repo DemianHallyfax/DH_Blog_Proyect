@@ -3,13 +3,15 @@ const express = require("express"),
   storiesRouter = require("./routes/routerStories"),
   articleRouter = require("./routes/router"),
   routerGallery = require("./routes/routerGallery"),
-  routerSGDH = require('./routes/routerSGDH')
+  routerSGDH = require('./routes/routerSGDH'),
   PORT = 5000,
-  mongoose = require('mongoose');
+  mongoose = require('mongoose'),
+  bodyParser = require("body-parser");
 
 /*---------------------------------------------
 MIDLEWARE
 ---------------------------------------------*/
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 try {
   mongoose.connect('mongodb://127.0.0.1:27017/Demian_Hallyfax_Blog');

@@ -1,21 +1,22 @@
 <div class="form-group">
-    <label for="title">Title</label>
-    <input required type="text" name="title" id="title" class="form-control">
+    <label for="title">Titulo</label>
+    <input required  value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
 </div>
 <div class="form-group">
     <label for="img">Imagen</label>
-    <input required type="text" name="img" id="img" class="form-control">
+    <input required value="<%= article.img %>" type="text" name="img" id="img" class="form-control">
 </div>
 <div class="form-group">
     <label for="imgTemp">Template</label>
-    <input required type="text" name="imgTemp" id="imgTemp" class="form-control">
+    <input required value="<%= article.imgTemp %>" type="text" name="imgTemp" id="imgTemp" class="form-control">
 </div>
 <div class="form-group">
-    <label for="description">Descrición</label>
-    <textarea name="decription" id="description" class="form-control"></textarea>
+    <label for="description">Descripción</label>
+    <textarea name="decription" id="description" class="form-control form-description"><%= article.description %></textarea>
 </div>
 <div class="form-group">
     <label for="article">Articulo</label>
-    <textarea name="article" id="article" class="form-control"></textarea>
+    <textarea required name="article" id="article" class="form-control form-article"><%= article.article %></textarea>
 </div>
+<a href="/SGDH/articles" class="btn-cancel">Cancelar</a>
 <button type="submit" class="btn-submit">Guardar</button>
