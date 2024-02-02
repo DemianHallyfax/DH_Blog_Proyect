@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= article.title %></title>
+    <link rel="stylesheet" href="../../public/assets/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../public/assets/style-blog.css" />
+    <link rel="icon" type="image/x-icon" href="../../public/imgs/icon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/assets/responsive/respAbout.css">
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container">
+      <div class="cont-about">
+        <%- include('../partials/about') %>
+        <div class="about-blog-list">
+          <h2>Todas las entradas:</h2>
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="cont-article">
+        <h1><%= article.title %></h1>
+        <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
+      </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>

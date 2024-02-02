@@ -1,7 +1,6 @@
 const express = require('express'),
     app = express();
     routerSGDH = express.Router(),
-    articles = require("../info_json/articlesTEST.json"),
     Article = require("./../models/article");
 
 app.use(express.static(__dirname + '/public'));
@@ -11,11 +10,12 @@ routerSGDH.get('/SGDH/lobby', (req, res) => {
     res.render('SGDH');
 });
 
-routerSGDH.get('/SGDH/articles', (req, res) => {
-    res.render('SGDH/articles', articles);
+routerSGDH.get('/SGDH/articles', async (req, res) => {
+    const articles = await Article.find().sort({ createdAt: 'desc'});
+    res.render('SGDH/articles', { articles });
 });
 routerSGDH.post('/SGDH/articles', async (req, res) => {
-    const article = new Article({
+    let article = new Article({
         title: req.body.title,
         img: req.body.img,
         imgTemp: req.body.imgTemp,
@@ -38,18 +38,22 @@ routerSGDH.get('/SGDH/articles/new', (req, res) => {
 });
 
 routerSGDH.get('/SGDH/articles/:id', async (req, res) => {
-    const id = req.params.id,
-       findArticle = await articles.find((x) => x.id === id);
+    // const id = req.params.id,
+    //    findArticle = await articles.find((x) => x.id === id);
     
-    const renderArticle = {
-        title: findArticle.title,
-        img: findArticle.img,
-        imgTemp: findArticle.imgTemplate,
-        description: findArticle.description,
-        article: findArticle.article
-    }
+    // const renderArticle = {
+    //     title: findArticle.title,
+    //     img: findArticle.img,
+    //     imgTemp: findArticle.imgTemplate,
+    //     description: findArticle.description,
+    //     article: findArticle.article
+    // }
     
-    res.render('SGDH/articleEdit', {renderArticle});
+    // res.render('SGDH/articleEdit', {renderArticle});
+
+    const article = await Article.findById(req.params.id);
+    if (article == null) res.redirect('SGDH/articles');
+    res.render('blog-articles/show', { article: article });
 });
 
 module.exports = routerSGDH;

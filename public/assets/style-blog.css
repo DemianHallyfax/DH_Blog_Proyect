@@ -111,3 +111,9 @@
 .cont-article img{
   margin: 40px;
 }
+.article-date{
+  margin: 20px;
+  font-family: acari;
+  font-size: 15px;
+  color: #bdbdbd;
+}

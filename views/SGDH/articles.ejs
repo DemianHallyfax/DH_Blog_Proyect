@@ -21,9 +21,11 @@
         <div><img src="<%= articles[i].imgTemplate %>" alt="" /></div>
         <div class="card-description">
           <h2><%= articles[i].title %></h2>
+          <p><%= articles[i].createdAt.toLocaleDateString() %></p>
           <p><%= articles[i].description %></p>
           <div class="card-selection">
-            <a href="/SGDH/articles/<%= articles[i].id %>" class="edit-btn">Edit</a>
+            <a href="/SGDH/articles/<%= articles[i].id %>" class="show-btn">Ver Articulo (prev)</a>
+            <a href="" class="edit-btn">Edit</a>
             <a href="" class="delete-btn">Delete</a>
           </div>
         </div>
