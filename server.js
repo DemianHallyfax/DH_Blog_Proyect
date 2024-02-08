@@ -1,12 +1,12 @@
 const express = require("express"),
   app = express(),
+  methodOverride = require("method-override"),
   storiesRouter = require("./routes/routerStories"),
   articleRouter = require("./routes/router"),
   routerGallery = require("./routes/routerGallery"),
   routerSGDH = require('./routes/routerSGDH'),
   PORT = 5000,
-  mongoose = require('mongoose'),
-  bodyParser = require("body-parser");
+  mongoose = require('mongoose');
 
 /*---------------------------------------------
 MIDLEWARE
@@ -27,6 +27,7 @@ app.use(articleRouter);
 app.use(storiesRouter);
 app.use(routerGallery);
 app.use(routerSGDH);
+app.use(methodOverride('_method'));
 
 /*---------------------------------------------
 EXTRAS

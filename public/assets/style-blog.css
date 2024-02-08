@@ -117,3 +117,30 @@
   font-size: 15px;
   color: #bdbdbd;
 }
+.article-buttons{
+  margin: 10px;
+}
+.btn-allArt{
+  padding: 10px;
+  background: #bdbdbd;
+  color: #000000;
+  font-family: acari-bold;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.btn-allArt:hover{
+  background-color: #807e7e;
+  color: #000000;
+}
+.btn-edit{
+  padding: 10px;
+  background: #37ea28;
+  color: #000000;
+  font-family: acari-bold;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.btn-edit:hover{
+  background-color: #30c522;
+  color: #000000;
+}

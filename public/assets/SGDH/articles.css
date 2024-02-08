@@ -10,15 +10,16 @@
 .card-description p{
     width: 90%;
 }
-.card-selection{
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
+
 .card-selection a{
     font-size: 17px;
     margin: 20px;
     padding: 10px;
     font-family: acari-bold;
+}
+.card-selection form{
+    display: inline;
+
 }
 .edit-btn{
     background: #555454;
@@ -30,6 +31,12 @@
 .delete-btn{
     background: #750909;
     border-radius: 3px;
+    border: none;
+    font-size: 17px;
+    margin: 20px;
+    padding: 10px;
+    font-family: acari-bold;
+    color: #ffffff;
 }
 .delete-btn:hover{
     background: #9b0b0b;

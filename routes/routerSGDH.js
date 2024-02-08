@@ -25,7 +25,7 @@ routerSGDH.post('/SGDH/articles', async (req, res) => {
 
     try{
         article = await article.save();
-        res.redirect(`/SGDH/articles/${article.id}`)
+        res.redirect(`/SGDH/articles/${article.slug}`)
     } catch (e){
         console.log(e)
         res.render('SGDH/new', { article: article })
@@ -37,7 +37,7 @@ routerSGDH.get('/SGDH/articles/new', (req, res) => {
     res.render('SGDH/new', {article: new Article() });
 });
 
-routerSGDH.get('/SGDH/articles/:id', async (req, res) => {
+routerSGDH.get('/SGDH/articles/:slug', async (req, res) => {
     // const id = req.params.id,
     //    findArticle = await articles.find((x) => x.id === id);
     
@@ -51,9 +51,14 @@ routerSGDH.get('/SGDH/articles/:id', async (req, res) => {
     
     // res.render('SGDH/articleEdit', {renderArticle});
 
-    const article = await Article.findById(req.params.id);
-    if (article == null) res.redirect('SGDH/articles');
+    const article = await Article.findOne({ slug: req.params.slug });
+    if (article == null) res.redirect('/SGDH/articles');
     res.render('blog-articles/show', { article: article });
+});
+
+routerSGDH.delete('/SGDH/articles/:id', async (req, res) => {
+    await Article.findByIdAndDelete(req.params.id);
+    res.redirect('/SGDH/articles');
 });
 
 module.exports = routerSGDH;
