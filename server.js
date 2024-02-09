@@ -1,6 +1,6 @@
 const express = require("express"),
-  app = express(),
   methodOverride = require("method-override"),
+  app = express(),
   storiesRouter = require("./routes/routerStories"),
   articleRouter = require("./routes/router"),
   routerGallery = require("./routes/routerGallery"),
@@ -11,6 +11,7 @@ const express = require("express"),
 /*---------------------------------------------
 MIDLEWARE
 ---------------------------------------------*/
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 try {
@@ -27,7 +28,6 @@ app.use(articleRouter);
 app.use(storiesRouter);
 app.use(routerGallery);
 app.use(routerSGDH);
-app.use(methodOverride('_method'));
 
 /*---------------------------------------------
 EXTRAS
