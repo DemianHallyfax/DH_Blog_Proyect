@@ -1,9 +1,10 @@
 .cont-about {
     width: 20%;
-    border-right: solid 5px #ffffff;
+    border-right: solid 1px #707070;
+    /* background: #181818; */
   }
   .about-info {
-    margin-right: 10px; 
+    margin: 20px;
     text-align: left;
     font-size: 15px;
   
@@ -16,10 +17,13 @@
     font-family: acari-bold;
     text-align: center;
   }
+  .about-info p{
+    margin: 0px;
+  }
   
   .about-me img {
     width: 130px;
-    margin-bottom: 20px;
+    /* margin-top: 20px; */
     border-radius: 100px;
     border: solid 4px #37ea28;
   }

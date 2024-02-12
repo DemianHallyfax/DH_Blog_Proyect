@@ -1,6 +1,8 @@
 .container{
     display: flex;
     flex-direction: column;
+    font-family: acari;
+
 }
 .intro{
     display: flex;
@@ -16,7 +18,7 @@
 .intro p{
     font-size: 12px;
     text-align: center;
-    margin-top: 0px;
+    font-family: acari;
 }
 .intro img{
     margin: auto;

@@ -8,6 +8,28 @@ const express = require("express"),
   PORT = 5000,
   mongoose = require('mongoose');
 
+  const os = require('os')
+
+  const nets = os.networkInterfaces();
+  const results = {}; // Or just '{}', an empty object
+  
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      // Skip over non-IPv4 and internal (i.e. 127.0.0.1) addresses
+      // 'IPv4' is in Node <= 17, from 18 it's a number 4 or 6
+      const familyV4Value = typeof net.family === 'string' ? 'IPv4' : 4
+      if (net.family === familyV4Value && !net.internal) {
+        if (!results[name]) {
+          results[name] = [];
+        }
+        results[name].push(net.address);
+      }
+    }
+  }
+
+  console.log(results.Ethernet[0]);
+  const IP = results.Ethernet[0];
+
 /*---------------------------------------------
 MIDLEWARE
 ---------------------------------------------*/
@@ -36,4 +58,6 @@ app.use(express.static(__dirname + "/public"));
 app.use("/public", express.static("public"));
 
 // app.listen(5000);
-app.listen(PORT)
+app.listen(PORT, () => {
+  console.log(`http://${IP}:${PORT}/`);
+})
