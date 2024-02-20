@@ -28,6 +28,10 @@
   src: url("fonts/Libre-Caslon-Text-master/fonts/TTF/LibreCaslonText-Italic.ttf");
 }
 
+:root{
+  --system-green: #37ea28;
+}
+
 body {
   /* background-image: url("../imgs/patterns/image-dphqi1s5.png"); */
   /* background-attachment: fixed; */
@@ -44,7 +48,7 @@ h1 {
   font-family: myfirstfont;
   text-transform: uppercase;
   font-size: 25px;
-  color: #37ea28;
+  color: var(--system-green);
   margin: 0px;
   border-bottom: solid 1px #707070;
   padding: 20px;

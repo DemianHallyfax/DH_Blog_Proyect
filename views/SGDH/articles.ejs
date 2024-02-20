@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/assets/styleSGDH.css" />
-    <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
+    <link rel="stylesheet" href="/../public/assets/styleSGDH.css" />
+    <link rel="icon" type="image/x-icon" href="/../../public/imgs/icon.ico" />
     <title>SGDH - ARTICLES</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
       <% for(let i = 0; i < articles.length; i++){ %>
 
       <div class="article-card">
-        <div><img src="<%= articles[i].imgTemplate %>" alt="" /></div>
+        <div><img src="<%= articles[i].imgTemp %>" alt="sjdufhg" /></div>
         <div class="card-description">
           <h2><%= articles[i].title %></h2>
           <p><%= articles[i].createdAt.toLocaleDateString() %></p>
@@ -26,6 +26,7 @@
 
           <div class="card-selection">
             <a href="/SGDH/articles/<%= articles[i].slug %>" class="show-btn">Ver Articulo (prev)</a>
+            <a href="/SGDH/articles/edit/<%= articles[i].id %>" class="show-btn">Editar</a>
 
             <form action="/SGDH/articles/<%= articles[i].id %>?_method=DELETE" method="post">
               <button type="submit" class="delete-btn">ELIMINAR</button>

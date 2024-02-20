@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <h1>Nuevo Articulo</h1>
+      <h1>Editar Articulo</h1>
 
-      <form action="/SGDH/articles" method="POST">
+      <form action="/SGDH/articles/<%= article.id %>?_method=PUT" method="POST">
         <%- include('_form_fields') %>
       </form>
 
