@@ -1,7 +1,8 @@
 const express = require("express"),
   app = express(),
   router = express.Router(),
-  articles = require("../info_json/articlesTEST.json"),
+  /*articles = require("../info_json/articlesTEST.json")*/
+  Article = require("./../models/article"),
   stories = require("../info_json/stories-testing.json"),
   { paginatedResults } = require("./functions/func"),
   marked = require("marked"),
@@ -18,16 +19,17 @@ app.use("/public", express.static("public"));
 /*------------------------------------------
 VARIABLES IMPORTANTES 
 ------------------------------------------*/
-articles.reverse();
-var articleRange = parseInt(articles.length);
+// articles.reverse();
+// var articleRange = parseInt(articles.length);
 
 /*------------------------------------------
 RUTAS
 ------------------------------------------*/
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  const articles = await Article.find().sort({ createdAt: 'desc'});
+
   res.render("index", {
     articles,
-    articleRange,
     stories,
   });
 });
@@ -37,7 +39,9 @@ router.get("/QuienSoy", async (req, res) => {
 });
 
 router.get("/blog", async (req, res) => {
+
   const page = parseInt(req.query.page),
+    articles = Article.find().sort({ createdAt: 'desc'});
     limit = parseInt(req.query.limit),
     rendResult = await paginatedResults(page, limit, articles),
     artRend = rendResult.results, 
