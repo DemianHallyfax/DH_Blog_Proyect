@@ -35,11 +35,11 @@ function paginatedResults(page, limit, model) {
     index.push(i + 1);
   }
 
-  console.log(endIndex, endIndex);
+  // console.log(endIndex, endIndex);
 
   let results = model.slice(startIndex, endIndex);
 
-  console.log(model);
+  // console.log(model);
 
   return { results, next, previus, index };
 };

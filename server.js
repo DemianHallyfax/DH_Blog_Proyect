@@ -27,8 +27,8 @@ const express = require("express"),
     }
   }
 
-  console.log(results.Ethernet[0]);
   const IP = results.Ethernet[0];
+  console.log(`http://${IP}:${PORT}/`);
 
 /*---------------------------------------------
 MIDLEWARE
@@ -58,6 +58,4 @@ app.use(express.static(__dirname + "/public"));
 app.use("/public", express.static("public"));
 
 // app.listen(5000);
-app.listen(PORT, () => {
-  console.log(`http://${IP}:${PORT}/`);
-})
+app.listen(PORT);

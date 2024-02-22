@@ -20,7 +20,8 @@ app.use("/public", express.static("public"));
 VARIABLES IMPORTANTES 
 ------------------------------------------*/
 // articles.reverse();
-// var articleRange = parseInt(articles.length);
+var articleRange = parseInt(Article.length);
+// console.log(articleRange);
 
 /*------------------------------------------
 RUTAS
@@ -41,29 +42,36 @@ router.get("/QuienSoy", async (req, res) => {
 router.get("/blog", async (req, res) => {
 
   const page = parseInt(req.query.page),
-    articles = Article.find().sort({ createdAt: 'desc'});
+    articles = await Article.find().sort({ createdAt: 'desc'}),
+    articleList = await Article.find().sort({ createdAt: 'desc'});
     limit = parseInt(req.query.limit),
-    rendResult = await paginatedResults(page, limit, articles),
-    artRend = rendResult.results, 
-    artRendNext = rendResult.next.page,
-    artRendPrevius = rendResult.previus.page,
-    indexLength = rendResult.index;
+    rendResult = await paginatedResults(page, limit, articles);
 
   res.render("blog", {
-    artRend,
-    artRendNext,
-    artRendPrevius,
-    indexLength,
+    articleList,
+    artRend : rendResult.results, 
+    artRendNext : rendResult.next.page,
+    artRendPrevius : rendResult.previus.page,
+    indexLength : rendResult.index,
     articles,
     articleRange,
   });
 });
 
-router.get("/blog/:id", async (req, res) => {
-  let id = parseInt(req.params.id);
-  const findValue = await articles.find((x) => x.id === id);
+router.get("/blog/:slug", async (req, res) => {
+  /*let id = parseInt(req.params.id);
+  const findValue = await articles.find((x) => x.id === id);*/
 
-  let renderTitle = findValue.title,
+  const article = await Article.findOne({ slug: req.params.slug }),
+    articleList = await Article.find().sort({ createdAt: 'desc'});
+    if (article == null) res.redirect('/blog');
+    res.render('blog-articles/articlesSheet', { 
+      article: article,
+      articleRange: articleRange,
+      articleList : articleList 
+    });
+
+  /*let renderTitle = findValue.title,
     renderArticle = findValue.article,
     renderImg = findValue.img;
 
@@ -75,6 +83,6 @@ router.get("/blog/:id", async (req, res) => {
     renderImg,
     articleRange,
     articles,
-  });
+  });*/
 });
 module.exports = router;

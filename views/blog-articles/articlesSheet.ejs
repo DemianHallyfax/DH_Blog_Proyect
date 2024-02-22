@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= renderTitle %></title>
+    <title><%= article.title %></title>
     <link rel="stylesheet" href="../public/assets/styles.css" type="text/css" />
     <link rel="stylesheet" href="../public/assets/style-blog.css" />
     <link rel="icon" type="image/x-icon" href="../public/imgs/icon.ico" />
@@ -21,8 +21,8 @@
           <ul>
             <% for(let i = 0; i+1 <= articleRange; i++){ %>
             <li>
-              <a href="<%= articles[i].id %>"
-                ><%= articles[i].title %></a
+              <a href="<%= articleList[i].slug %>"
+                ><%= articleList[i].title %></a
               >
             </li>
             <% } %>
@@ -31,9 +31,9 @@
       </div>
 
       <div class="cont-article">
-        <h1><%= renderTitle %></h1>
-        <img src="<%= renderImg %>" alt="" />
-        <p><%- renderArticle %></p>
+        <h1><%= article.title %></h1>
+        <img src="<%= article.img %>" alt="" />
+        <p><%- article.sanitizedHtml %></p>
       </div>
     </div>
 

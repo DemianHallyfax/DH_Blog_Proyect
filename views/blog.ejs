@@ -21,7 +21,7 @@
           <h2>Todas las entradas:</h2>
           <ul>
             <% for(let i = 0; i+1 <= articleRange; i++){ %>
-            <li><a href="/blog/<%= articles[i].id %>"><%= articles[i].title %></a></li>
+            <li><a href="/blog/<%= articleList[i].slug %>"><%= articleList[i].title %></a></li>
             <% } %>
           </ul>
         </div>
@@ -34,10 +34,10 @@
         <% for(let i = 0; i < artRend.length; i++){%>
         <div class="content">
           <div>
-            <a href="/blog/<%= artRend[i].id %>"><img src="<%= artRend[i].imgTemplate %>" alt=""/></a>
+            <a href="/blog/<%= artRend[i].slug %>"><img src="<%= artRend[i].imgTemp %>" alt=""/></a>
           </div>
           <div>
-            <h2><a href="/blog/<%= artRend[i].id %>"><%= artRend[i].title %></a></h2>
+            <h2><a href="/blog/<%= artRend[i].slug %>"><%= artRend[i].title %></a></h2>
             <p><%= artRend[i].description %></p>
           </div>
         </div>
