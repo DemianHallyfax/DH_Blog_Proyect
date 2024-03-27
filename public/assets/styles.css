@@ -63,6 +63,7 @@ h2 {
   font-family: acari-bold;
   font-size: 20px;
   margin: 10px;
+  text-align: left;
 }
 body h3{
   font-family: acari-bold;
@@ -123,26 +124,44 @@ nav {
   font-family: acari-bold;
 }
 
-.cont-fanfic img:hover{
-  border: solid 4px #37ea28;
-}
 .container {
+  display: flex;
+    flex-direction: row;
+    justify-self: center;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 40px;
   margin-left: 20px;
   margin-right: 20px;
-  /* padding: 20px; */
   width: auto;
-  /* background: #00000089; */
-  /* background: #0e0e0e; */
-  /* border: #37ea28 solid 2px; */
-
-
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
 }
+.cont-fanfic img:hover{
+  border: solid 4px #37ea28;
+}
+/*--- PAGINATION ---*/
+.pagination{
+  display: flex;
+  justify-content: safe;
+  
+  margin: 5px;
+  width: 50%;
+  border-top: #a5a5a5 solid 2px;
+}
+.pagination p{
+  display: flex;
+  justify-content: safe;
+  margin: 0%;
+}
+.pagination a{
+  font-size: 20px;
+  color: #a5a5a5;
+  font-family: Libre-C;
+}
+.pagination a:hover{
+  color: #37ea28;
+}
+/*------------------*/
+
 footer{
   background-color: #151515;
   margin-top: 10px;

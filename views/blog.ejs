@@ -13,7 +13,7 @@
     <%- include('./partials/nav') %>
 
     <div class="container">
-      <div class="cont-about">
+      <aside class="about">
         <%- include('./partials/about') %>
 
 <!-- ~~~~~ LISTADO DE TODAS LAS ENTRADAS ~~~~~ -->
@@ -25,14 +25,14 @@
             <% } %>
           </ul>
         </div>
-      </div>
+      </aside>
 
 <!-- ~~~~~ LISTADO DE ENTRADAS DEL BLOG ~~~~~ -->
-      <div class="cont-blog">
+      <section class="main">
         <h1>El Blog de Demian</h1>
 
         <% for(let i = 0; i < Render.length; i++){%>
-        <div class="content">
+        <article class="mainCard">
           <div>
             <a href="/blog/<%= Render[i].slug %>"><img src="<%= Render[i].imgTemp %>" alt=""/></a>
           </div>
@@ -40,11 +40,11 @@
             <h2><a href="/blog/<%= Render[i].slug %>"><%= Render[i].title %></a></h2>
             <p><%= Render[i].description %></p>
           </div>
-        </div>
+        </article>
         <% } %>
 
 <!-- ~~~~~ MENU DE NAVEGACIÓN DE LAS ENTRADAS ~~~~~ -->
-        <div class="pagination-blog">
+        <div class="pagination">
           <% if(Previus){%>
             <p><a href="/blog?page=<%= Previus %>&limit=5"><</a></p>
           <% } %>
@@ -58,7 +58,7 @@
           <% } %>
         </div>
 
-      </div>
+      </section>
     </div>
 
     
