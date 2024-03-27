@@ -1,7 +1,6 @@
 const express = require("express"),
   app = express(),
   router = express.Router(),
-  /*articles = require("../info_json/articlesTEST.json")*/
   Article = require("./../models/article"),
   stories = require("../info_json/stories-testing.json"),
   { paginatedResults } = require("./functions/func"),
@@ -27,7 +26,7 @@ var articleRange = parseInt(Article.length);
 RUTAS
 ------------------------------------------*/
 router.get("/", async (req, res) => {
-  const articles = await Article.find().sort({ createdAt: 'desc'});
+  const articles = await Article.find().sort({ createdAt: "desc" });
 
   res.render("index", {
     articles,
@@ -40,20 +39,18 @@ router.get("/QuienSoy", async (req, res) => {
 });
 
 router.get("/blog", async (req, res) => {
-
   const page = parseInt(req.query.page),
-    articles = await Article.find().sort({ createdAt: 'desc'}),
-    articleList = await Article.find().sort({ createdAt: 'desc'});
     limit = parseInt(req.query.limit),
+    articles = await Article.find().sort({ createdAt: "desc" }),
+    articleList = await Article.find().sort({ createdAt: "desc" }),
     rendResult = await paginatedResults(page, limit, articles);
 
   res.render("blog", {
+    Render: rendResult.results,
+    Next: rendResult.next,
+    Previus: rendResult.previus,
+    indexLength: rendResult.index.length,
     articleList,
-    artRend : rendResult.results, 
-    artRendNext : rendResult.next.page,
-    artRendPrevius : rendResult.previus.page,
-    indexLength : rendResult.index,
-    articles,
     articleRange,
   });
 });
@@ -63,13 +60,13 @@ router.get("/blog/:slug", async (req, res) => {
   const findValue = await articles.find((x) => x.id === id);*/
 
   const article = await Article.findOne({ slug: req.params.slug }),
-    articleList = await Article.find().sort({ createdAt: 'desc'});
-    if (article == null) res.redirect('/blog');
-    res.render('blog-articles/articlesSheet', { 
-      article: article,
-      articleRange: articleRange,
-      articleList : articleList 
-    });
+    articleList = await Article.find().sort({ createdAt: "desc" });
+  if (article == null) res.redirect("/blog");
+  res.render("blog-articles/articlesSheet", {
+    article: article,
+    articleRange: articleRange,
+    articleList: articleList,
+  });
 
   /*let renderTitle = findValue.title,
     renderArticle = findValue.article,

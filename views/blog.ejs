@@ -31,30 +31,30 @@
       <div class="cont-blog">
         <h1>El Blog de Demian</h1>
 
-        <% for(let i = 0; i < artRend.length; i++){%>
+        <% for(let i = 0; i < Render.length; i++){%>
         <div class="content">
           <div>
-            <a href="/blog/<%= artRend[i].slug %>"><img src="<%= artRend[i].imgTemp %>" alt=""/></a>
+            <a href="/blog/<%= Render[i].slug %>"><img src="<%= Render[i].imgTemp %>" alt=""/></a>
           </div>
           <div>
-            <h2><a href="/blog/<%= artRend[i].slug %>"><%= artRend[i].title %></a></h2>
-            <p><%= artRend[i].description %></p>
+            <h2><a href="/blog/<%= Render[i].slug %>"><%= Render[i].title %></a></h2>
+            <p><%= Render[i].description %></p>
           </div>
         </div>
         <% } %>
 
 <!-- ~~~~~ MENU DE NAVEGACIÓN DE LAS ENTRADAS ~~~~~ -->
         <div class="pagination-blog">
-          <% if(artRendPrevius){%>
-            <p><a href="/blog?page=<%= artRendPrevius %>&limit=5"><</a></p>
+          <% if(Previus){%>
+            <p><a href="/blog?page=<%= Previus %>&limit=5"><</a></p>
           <% } %>
 
-          <% for(let i = 0; i < indexLength.length; i++) {%>
+          <% for(let i = 0; i < indexLength; i++) {%>
             <p><a href="/blog?page=<%= i + 1 %>&limit=5"><%= i + 1 %></a></p>
           <%}%>
   
-          <% if(artRendNext){%>
-            <p><a href="/blog?page=<%= artRendNext %>&limit=5">></a></p>
+          <% if(Next){%>
+            <p><a href="/blog?page=<%= Next %>&limit=5">></a></p>
           <% } %>
         </div>
 

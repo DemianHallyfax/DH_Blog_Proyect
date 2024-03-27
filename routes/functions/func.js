@@ -41,7 +41,13 @@ function paginatedResults(page, limit, model) {
 
   // console.log(model);
 
-  return { results, next, previus, index };
+  //return { results, next, previus, index };
+  return {
+    results : results,
+    next : next.page,
+    previus : previus.page,
+    index : index
+  }
 };
 
 
